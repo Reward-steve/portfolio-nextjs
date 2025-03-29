@@ -2,21 +2,21 @@ import Button from "./buttons";
 import Link from "next/link";
 
 const mapNavigation = [
-  { path: "#", linkName: "About Me" },
+  { path: "#about", linkName: "About Me" },
   { path: "#", linkName: "Projects I've Done" },
   { path: "/", linkName: "Contact Me" },
 ];
 
 export default function Navigation() {
   return (
-    <nav className="p-5 flex justify-between items-center border-b-1">
+    <nav className="px-10 py-5 flex justify-between items-center">
       <Link
         href="/"
-        className="rounded-full border-1 p-5 border-cyan-400 text-cyan-400 font-bold text-2xl"
+        className="rounded-full border-1 p-3 border-cyan-400 text-cyan-400 font-bold text-2xl"
       >
         RS
       </Link>
-      <ul className="flex h-full justify-evenly items-center w-1/2">
+      <ul className="flex h-full justify-between items-center w-1/2">
         {mapNavigation.map((nav, key) => {
           return (
             <li
