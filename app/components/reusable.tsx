@@ -1,15 +1,38 @@
+import { domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-client";
 import Button from "./buttons";
 
 export default function Title() {
   return (
-    <header className="w-1/2 flex items-center justify-evenly h-150 direction-column flex-col">
-      <section className="h-screen flex flex-col justify-center items-center text-center gap-5">
-        <p className="text-cyan-400 text-2xl">Hello, I'm</p>
-        <h1 className="text-6xl font-bold">Reward Stephen.</h1>
-        <span className="text-4xl font-bold">Front-End Developer</span>
-        <p className="mt-2">
-          passionate about building responsive modern web applications.
-        </p>
+    <header className="w-1/2 flex items-center justify-evenly h-auto flex-col">
+      <section className="min-h-screen flex items-start justify-center flex-col gap-5">
+        <LazyMotion features={domAnimation}>
+          <m.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-cyan-400 text-2xl"
+          >
+            Hello, I'm
+          </m.p>
+          <m.h1
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="text-6xl font-bold"
+          >
+            Reward Stephen.
+          </m.h1>
+          <m.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-2"
+          >
+            A Front-End Developer passionate about building responsive modern
+            web applications.
+          </m.p>
+        </LazyMotion>
         <Button text="Check out my projects" />
       </section>
     </header>
@@ -25,13 +48,15 @@ export function SectionName({ num, title }: { num: number; title: string }) {
   );
 }
 
-export const skills1 = ["HTML5", "CSS3", "JavaScript", "Git, GitHub"];
+export const skills1 = ["HTML5", "CSS3", "JavaScript", "Git", "GitHub"];
 export const skills2 = [
   "React.JS",
   "Next.js",
   "Tailwind CSS",
-  "Scss, Chakra UI",
+  "Scss",
+  "Chakra UI",
 ];
+
 export const expertise = [
   { skill: " React.js, ", color: "text-blue-400" },
   { skill: " Next.js, ", color: "text-white" },
@@ -55,18 +80,18 @@ export const what_drives_me = [
 
 export const projects = [
   {
-    title: "FlorinTech Computer College",
+    title: "Restaurant Web App",
     description:
       "A web application for a local restaurant business, where I was responsible for front-end development.",
   },
   {
-    title: "FlorinTech Computer College",
+    title: "Portfolio Website",
     description:
-      "A web application for a local restaurant business, where I was responsible for front-end development.",
+      "A personal portfolio showcasing my projects and skills, built with Next.js and Tailwind CSS.",
   },
   {
-    title: "FlorinTech Computer College",
+    title: "Time Management App",
     description:
-      "A web application for a local restaurant business, where I was responsible for front-end development.",
+      "A productivity tool to help users track and manage their daily activities efficiently.",
   },
 ];

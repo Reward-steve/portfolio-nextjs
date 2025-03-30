@@ -21,7 +21,7 @@
   :root {
     --background: rgb(2, 28, 53);
     --foreground: rgba(179, 208, 255, 0.726);
-    --headings: rgb(179, 208, 255);
+    --headings: rgb(200, 221, 255);
   }
 }
 
@@ -40,9 +40,10 @@ a {
 }
 
 .navlink-effect:hover {
-  color: var(--foreground);
-  text-decoration: underline;
-  text-decoration-color: rgb(23, 207, 231);
-  text-underline-offset: 7px;
-  transition: all 0.3s linear;
+  color: rgb(0, 225, 255);
+  transition: 0.5s linear;
+}
+.navlink-effect:hover span {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
 }
