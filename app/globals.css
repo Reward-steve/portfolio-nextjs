@@ -1,4 +1,9 @@
 @import "tailwindcss";
+* {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #c6e5ff transparent;
+}
 
 :root {
   --background: #ffffff;
@@ -15,7 +20,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: rgb(2, 28, 53);
-    --foreground: rgb(179, 208, 255);
+    --foreground: rgba(179, 208, 255, 0.726);
+    --headings: rgb(179, 208, 255);
   }
 }
 
@@ -23,5 +29,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
+  padding: 20px 50px;
+}
+
+h1,
+h2,
+h3,
+a {
+  color: var(--headings);
+}
+
+.navlink-effect:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: rgb(23, 207, 231);
+  text-underline-offset: 7px;
+  transition: all 0.3s linear;
 }

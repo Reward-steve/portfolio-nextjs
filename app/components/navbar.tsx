@@ -4,12 +4,12 @@ import Link from "next/link";
 const mapNavigation = [
   { path: "#about", linkName: "About Me" },
   { path: "#", linkName: "Projects I've Done" },
-  { path: "/", linkName: "Contact Me" },
+  { path: "#contact", linkName: "Contact Me" },
 ];
 
 export default function Navigation() {
   return (
-    <nav className="px-10 py-5 flex justify-between items-center">
+    <nav className="flex justify-between items-center">
       <Link
         href="/"
         className="rounded-full border-1 p-3 border-cyan-400 text-cyan-400 font-bold text-2xl"
@@ -19,11 +19,10 @@ export default function Navigation() {
       <ul className="flex h-full justify-between items-center w-1/2">
         {mapNavigation.map((nav, key) => {
           return (
-            <li
-              key={key}
-              className="hover:text-cyan-400 hover:underline underline-offset-6 transition duration-300 ease-in-out"
-            >
-              <Link href={nav.path}>{nav.linkName}</Link>
+            <li key={key}>
+              <Link className="navlink-effect" href={nav.path}>
+                {nav.linkName}
+              </Link>
             </li>
           );
         })}
