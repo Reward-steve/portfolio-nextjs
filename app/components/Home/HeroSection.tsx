@@ -12,7 +12,7 @@ export default function HeroSection() {
             src={logo}
             alt="logo"
             priority
-            style={{ filter: "brightness(.7)" }}
+            style={{ filter: "brightness(.8)" }}
             className="rounded-xl w-110 h-full"
           />
         </section>
