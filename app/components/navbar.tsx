@@ -20,8 +20,9 @@ export default function Navigation() {
         {mapNavigation.map((nav, key) => {
           return (
             <li key={key}>
-              <Link className="navlink-effect" href={nav.path}>
+              <Link className="navlink-effect flex flex-col" href={nav.path}>
                 {nav.linkName}
+                <span className="w-0 h-[1px] bg-cyan-400"></span>
               </Link>
             </li>
           );

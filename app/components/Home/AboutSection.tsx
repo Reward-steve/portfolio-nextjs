@@ -4,7 +4,7 @@ import {
   SectionName,
   skills1,
   skills2,
-  expertise,
+  // expertise,
   what_drives_me,
 } from "../reusable";
 
@@ -17,17 +17,12 @@ export default function AboutSection() {
           <p className="mt-4 text-lg">
             I'm a Front-End Developer with over a year of experience in building
             well-optimized and responsive web applications while following best
-            practices. My expertise includes
-            {expertise.map((exp, index) => (
-              <span key={index} className={exp.color}>
-                {exp.skill}
-              </span>
-            ))}
-            . At FlorinTech Computer College, I worked on various projects,
-            including a web application for a local restaurant business, where I
-            was responsible for front-end development. I am passionate about
-            creating responsive, user-friendly interfaces and excited to bring
-            my skills to your team.
+            practices. My expertise includes. At FlorinTech Computer College, I
+            worked on various projects, including a web application for a local
+            restaurant business, where I was responsible for front-end
+            development. I am passionate about creating responsive,
+            user-friendly interfaces and excited to bring my skills to your
+            team.
             <br />
           </p>
 
