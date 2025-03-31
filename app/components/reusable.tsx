@@ -30,6 +30,13 @@ export const expertise = [
   "Continuous Learning",
 ];
 
+export const sociaIcons = [
+  { icon: "IN", iconName: "LinkedIn", color: "text-blue-400" },
+  { icon: "IT", iconName: "Instagram", color: "text-blue-500" },
+  { icon: "GM", iconName: "Gmail", color: "text-green-400" },
+  { icon: "FB", iconName: "facebook", color: "text-blue-600" },
+];
+
 export const what_drives_me = [
   "The satisfaction of bringing ideas to life through code.",
   "A passion for learning new technologies and staying ahead of industry trends.",

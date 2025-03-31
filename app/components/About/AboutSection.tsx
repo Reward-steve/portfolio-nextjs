@@ -6,12 +6,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <m.section
-      className="w-full flex flex-col gap-10 p-6 bg-gray-800 text-white rounded-xl shadow-lg"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
+    <>
       <SectionName title="About Me" />
       <div className="w-full flex flex-wrap justify-between items-center">
         {/* About Me Content */}
@@ -112,6 +107,6 @@ export default function AboutSection() {
           , helping boost my productivity and efficiency.
         </p>
       </m.footer>
-    </m.section>
+    </>
   );
 }
