@@ -2,6 +2,7 @@ import * as m from "motion/react-client";
 import Image from "next/image";
 import profile from "@/app/image/profile.jpg";
 import { SectionName, skills1, skills2, what_drives_me } from "../reusable";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -66,10 +67,15 @@ export default function AboutSection() {
                       }}
                       whileTap={{ scale: 0.9 }}
                       transition={{ type: "spring", stiffness: 500 }}
-                      className={`flex items-center gap-2 ${skill.color}`}
+                      className={"flex items-center gap-2"}
                     >
                       <span className="font-bold text-cyan-400 text-xl">*</span>{" "}
-                      {skill.skill}
+                      <Link
+                        className={`${skill.color}`}
+                        href={`https://www.google.com/search?q=${skill.skill}`}
+                      >
+                        {skill.skill}
+                      </Link>
                     </m.li>
                   ))}
                 </ul>

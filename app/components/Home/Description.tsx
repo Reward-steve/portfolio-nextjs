@@ -22,7 +22,7 @@ export default function Discription() {
   }, [index]);
 
   return (
-    <section className="w-full min-h-screen flex items-start justify-center flex-col gap-5 relative">
+    <section className="w-full min-h-screen flex items-start justify-center flex-col gap-10 relative">
       <m.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

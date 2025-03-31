@@ -3,20 +3,20 @@ export function SectionName({ title }: { title: string }) {
 }
 
 export const skills1 = [
-  { skill: " HTML5, ", color: "text-red-600" },
-  { skill: " CSS3, ", color: "text-blue-500" },
-  { skill: " JavaScript, ", color: "text-yellow-400" },
-  { skill: " Git ", color: "text-gray-500" },
-  { skill: " GitHub, ", color: "text-gray-500" },
-  { skill: " VS Code, ", color: "text-blue-500" },
+  { skill: "HTML5 ", color: "text-red-600" },
+  { skill: "CSS3 ", color: "text-blue-500" },
+  { skill: "JavaScript ", color: "text-yellow-400" },
+  { skill: "Git ", color: "text-gray-500" },
+  { skill: "GitHub ", color: "text-gray-500" },
+  { skill: "VS Code ", color: "text-blue-500" },
 ];
 export const skills2 = [
-  { skill: " React.js, ", color: "text-blue-400" },
-  { skill: " Next.js, ", color: "text-white" },
-  { skill: " TypeScript, ", color: "text-blue-400" },
-  { skill: " Tailwind CSS, ", color: "text-cyan-400" },
-  { skill: " Scss, ", color: "text-pink-400" },
-  { skill: " Chakra UI ", color: "text-cyan-400" },
+  { skill: "React.js ", color: "text-blue-400" },
+  { skill: "Next.js ", color: "text-white" },
+  { skill: "TypeScript ", color: "text-blue-400" },
+  { skill: "Tailwind CSS ", color: "text-cyan-400" },
+  { skill: "Scss ", color: "text-pink-400" },
+  { skill: "Chakra UI ", color: "text-cyan-400" },
 ];
 
 export const expertise = [
