@@ -1,3 +1,11 @@
+import { FaSquareFacebook, FaSquareInstagram, FaGithub } from "react-icons/fa6";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { CgMail } from "react-icons/cg";
+import img1 from "../image/country.png";
+import img2 from "../image/food.png";
+import img3 from "../image/ticket.png";
+import img4 from "../image/personal.png";
+
 export function SectionName({ title }: { title: string }) {
   return <h1 className="text-4xl font-bold">{title}</h1>;
 }
@@ -31,10 +39,31 @@ export const expertise = [
 ];
 
 export const sociaIcons = [
-  { icon: "IN", iconName: "LinkedIn", color: "text-blue-400" },
-  { icon: "IT", iconName: "Instagram", color: "text-blue-500" },
-  { icon: "GM", iconName: "Gmail", color: "text-green-400" },
-  { icon: "FB", iconName: "facebook", color: "text-blue-600" },
+  {
+    Icon: FaGithub,
+    color: "black",
+    iconName: "GitHub",
+  },
+  {
+    Icon: IoLogoLinkedin,
+    color: "blue-400",
+    iconName: "LinkedIn",
+  },
+  {
+    Icon: FaSquareInstagram,
+    color: "red-500",
+    iconName: "Instagram",
+  },
+  {
+    Icon: CgMail,
+    color: "green-400",
+    iconName: "Gmail",
+  },
+  {
+    Icon: FaSquareFacebook,
+    color: "blue-600",
+    iconName: "facebook",
+  },
 ];
 
 export const what_drives_me = [
@@ -47,18 +76,66 @@ export const what_drives_me = [
 
 export const projects = [
   {
-    title: "Restaurant Web App",
-    description:
-      "A web application for a local restaurant business, where I was responsible for front-end development.",
+    title: "TastyHub Website 🍔",
+    image: img2,
+    cardInfo:
+      "An interactive and visually appealing website for food lovers to discover and explore delicious recipes.",
+
+    features: [
+      "Browse a collection of mouth-watering recipes",
+      "User-friendly interface with an elegant design",
+      "Fully responsive for both mobile and desktop users",
+      "Smooth animations for a modern experience",
+    ],
+    demo: "https://tasty-hub-phi.vercel.app/",
+    repo: "https://github.com/Reward-steve/Tasty-hub",
   },
   {
-    title: "Portfolio Website",
-    description:
+    title: "My Country App 🌍",
+    image: img1,
+    cardInfo:
+      "A web app that provides detailed information about different countries, including their flags, population, and economic data.",
+    features: [
+      "Search for any country by name",
+      "View country details, including flag, capital, population, and GDP",
+      "Dark mode support",
+      "Fully responsive design for all devices",
+    ],
+    demo: "https://my-country-app-three.vercel.app/",
+    repo: "https://github.com/Reward-steve/My-Country-App",
+  },
+  {
+    title: "Personal Portfolio 🌟",
+    image: img4,
+    cardInfo:
       "A personal portfolio showcasing my projects and skills, built with Next.js and Tailwind CSS.",
+    features: [
+      "Next.js & Tailwind CSS",
+      "Smooth animations",
+      "Fully responsive",
+    ],
+    demo: "https://reward-steve-portfolio.vercel.app/",
+    repo: "https://github.com/Reward-steve/Portfolio",
   },
   {
-    title: "Time Management App",
-    description:
-      "A productivity tool to help users track and manage their daily activities efficiently.",
+    title: "Conference Ticket Generator 🎟️",
+    image: img3,
+    cardInfo:
+      "A dynamic web application that generates unique conference tickets for attendees.",
+    features: [
+      "Generates unique, scannable QR-coded tickets",
+      "Users can enter their details and receive an instant digital ticket",
+      "Admin panel for managing ticket registrations",
+      "Secure and tamper-proof ticket validation",
+      "Modern UI with a seamless user experience",
+    ],
+    demo: "https://conference-ticket-generator-gamma.vercel.app/",
+    repo: "https://github.com/Reward-steve/conference-ticket-generator-main",
   },
 ];
+
+/*## 📫 How to Reach Me  
+💼 **LinkedIn:** [**LinkedIn**](https://www.linkedin.com/in/reward-stephen-166021310/)  
+🐦 **Twitter:** [**Twitter**](https://x.com/RewardStephen)  
+📘 **Facebook:** [**Facebook**](https://facebook.com/rewardstephen)  
+📧 **Email:** rewardstephen30@gmail.com  */
