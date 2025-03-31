@@ -2,14 +2,14 @@ import Button from "./buttons";
 import Link from "next/link";
 
 const mapNavigation = [
-  { path: "#about", linkName: "About Me" },
-  { path: "#", linkName: "Projects I've Done" },
-  { path: "#contact", linkName: "Contact Me" },
+  { path: "/About", linkName: "About Me" },
+  { path: "/Project", linkName: "Projects I've Done" },
+  { path: "/Contact", linkName: "Contact Me" },
 ];
 
 export default function Navigation() {
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center w-full h-16 bg-slate-900 text-white px-10 top-0 z-50">
       <Link
         href="/"
         className="rounded-full border-1 p-3 border-cyan-400 text-cyan-400 font-bold text-2xl"
