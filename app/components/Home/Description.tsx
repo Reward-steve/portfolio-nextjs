@@ -7,23 +7,21 @@ import { sociaIcons } from "../reusable";
 export default function Discription() {
   const text =
     "A Front-End Developer passionate about building responsive modern web applications.";
-
-  // State to manage the displayed text and index of the current character
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText((pre) => pre + text[index]);
-        setIndex((prev) => prev + 1);
-      }
-    }, 20);
-    return () => clearInterval(interval);
-  }, [index]);
+    if (index < text.length) {
+      const interval = setInterval(() => {
+        setDisplayedText(text.slice(0, index + 1));
+        setIndex(index + 1);
+      }, 20);
+      return () => clearInterval(interval);
+    }
+  }, [index, text]);
 
   return (
-    <section className="w-full h-150 flex items-start justify-center flex-col gap-10 relative">
+    <section className="w-full h-150 flex flex-col gap-10 relative items-start justify-center">
       <m.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,30 +40,26 @@ export default function Discription() {
       </m.h1>
       <m.p transition={{ duration: 0.5, delay: 0.3 }} className="mt-2 w-3/4">
         {displayedText}
-        <span className="animate-bounce">{index < text.length ? "|" : ""}</span>
+        {index < text.length && <span className="animate-bounce">|</span>}
       </m.p>
-
       <Button text="Check out my projects" />
-
       <m.div
         initial={{ x: -300 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="w-100 rounded-full m-10 flex justify-between items-center"
+        className="rounded-full m-10 flex justify-between items-center gap-3"
       >
-        {sociaIcons.map((icons, index) => {
-          return (
-            <m.div
-              whileHover={{ color: "cyan", y: -5 }}
-              transition={{ duration: 0.3 }}
-              style={{ boxShadow: "0 0 10px 0px cyan" }}
-              className="border-1 w-15 h-15 text-gray-400 rounded-full flex cursor-pointer items-center justify-center"
-              key={index}
-            >
-              {icons.icon}
-            </m.div>
-          );
-        })}
+        {sociaIcons.map(({ Icon, color, iconName }, i) => (
+          <m.div
+            key={i}
+            whileHover={{ y: -5, boxShadow: "0 0 10px 0px" }}
+            transition={{ duration: 0.3 }}
+            title={iconName}
+            className={`border border-1 w-15 h-15 text-gray-400 hover:text-${color} rounded-full flex cursor-pointer items-center justify-center`}
+          >
+            {<Icon size={30} className={`hover:text-${color}`} />}
+          </m.div>
+        ))}
       </m.div>
     </section>
   );
