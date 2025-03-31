@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Button from "./buttons";
 import Link from "next/link";
+import * as m from "motion/react-client";
 
 const mapNavigation = [
   { path: "/About", linkName: "About Me" },
-  { path: "/Project", linkName: "Projects I've Done" },
+  { path: "/Project", linkName: "Projects I've Built" },
   { path: "/Contact", linkName: "Contact Me" },
 ];
 
@@ -14,20 +15,34 @@ export default function Navigation() {
   const [isActive, setIsActive] = useState<number | null>(null);
 
   return (
-    <nav className="flex justify-between items-center w-full h-16 bg-slate-900 text-white px-10 top-0 z-50">
-      <div className="">
-        <Link
-          href="/"
-          className="rounded-full border-1 p-3 border-cyan-400 text-cyan-400 font-bold text-2xl"
-          onClick={() => setIsActive(null)}
-          style={{
-            textShadow: isActive === null ? "0 0 20px cyan" : "",
-            transition: "text-shadow 0.3s ease-in-out",
-          }}
-        >
-          RS
-        </Link>
-      </div>
+    <nav className="flex justify-between items-center w-full h-16 bg-slate-900 text-white py-10 px-10 top-0 z-50">
+      <Link
+        href="/"
+        className="rounded-full border-1 p-3 flex justify-center relative items-center flex-col border-cyan-400 text-cyan-400 top-0 left-0 font-bold text-2xl drop-shadow-2x transition-all duration-300"
+        onClick={() => setIsActive(null)}
+        style={{
+          textShadow: isActive === null ? "0 0 20px cyan" : "",
+          transition: "text-shadow 0.3s ease-in-out",
+        }}
+      >
+        RS
+        {isActive === null && (
+          <>
+            <m.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: -360 }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="rounded-full border-1 px-5 w-17.5 h-14 absolute bottom-0 border-cyan-500 text-cyan-40"
+            ></m.div>
+            <m.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              className="rounded-full border-1 px-5 w-17.5 h-14 absolute bottom-0 border-cyan-500 text-cyan-40"
+            ></m.div>
+          </>
+        )}
+      </Link>
       <ul className="flex h-full justify-between items-center w-1/2">
         {mapNavigation.map((nav, index) => {
           const active = index === isActive;

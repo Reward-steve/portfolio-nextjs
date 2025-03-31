@@ -2,6 +2,7 @@
 import * as m from "motion/react-client";
 import Button from "../buttons";
 import { useEffect, useState } from "react";
+import { sociaIcons } from "../reusable";
 
 export default function Discription() {
   const text =
@@ -17,12 +18,12 @@ export default function Discription() {
         setDisplayedText((pre) => pre + text[index]);
         setIndex((prev) => prev + 1);
       }
-    }, 50);
+    }, 20);
     return () => clearInterval(interval);
   }, [index]);
 
   return (
-    <section className="w-full min-h-screen flex items-start justify-center flex-col gap-10 relative">
+    <section className="w-full h-150 flex items-start justify-center flex-col gap-10 relative">
       <m.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,6 +46,27 @@ export default function Discription() {
       </m.p>
 
       <Button text="Check out my projects" />
+
+      <m.div
+        initial={{ x: -300 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+        className="w-100 rounded-full m-10 flex justify-between items-center"
+      >
+        {sociaIcons.map((icons, index) => {
+          return (
+            <m.div
+              whileHover={{ color: "cyan", y: -5 }}
+              transition={{ duration: 0.3 }}
+              style={{ boxShadow: "0 0 10px 0px cyan" }}
+              className="border-1 w-15 h-15 text-gray-400 rounded-full flex cursor-pointer items-center justify-center"
+              key={index}
+            >
+              {icons.icon}
+            </m.div>
+          );
+        })}
+      </m.div>
     </section>
   );
 }

@@ -1,19 +1,20 @@
+import { SectionName, projects } from "../reusable";
 import Card from "../card";
-import { SectionName } from "../reusable";
 
 export default function ProjectSection() {
   return (
     <>
-      <section
-        id="projects"
-        className="w-full flex flex-col gap-10 p-6 bg-gray-800 text-white rounded-xl shadow-lg"
-      >
-        <SectionName title="Projects I've built" />
-        <ul className="flex justify-center items-center">
-          <li>PERSONAL PROJECT</li>
-        </ul>
-        <Card />
-      </section>
+      <SectionName title="Projects I've built" />
+      <h1 className="flex justify-center items-center">PERSONAL PROJECTS</h1>
+      {projects.map((project, index) => {
+        return (
+          <Card
+            num={`0${index + 1}`}
+            key={index}
+            cardInfo={project.description}
+          />
+        );
+      })}
     </>
   );
 }
