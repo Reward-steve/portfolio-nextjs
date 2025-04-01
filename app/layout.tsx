@@ -4,6 +4,19 @@ import "./globals.css";
 import Navigation from "@/app/components/navbar";
 import PageHolder from "./components/pageHolder";
 
+import { Inter, Roboto } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", // Optional: Use CSS variable
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Choose specific weights
+  display: "swap",
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${inter.variable} ${roboto.className}`}
       >
         <Navigation />
         <PageHolder>{children}</PageHolder>

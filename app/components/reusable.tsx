@@ -114,8 +114,8 @@ export const projects = [
       "Smooth animations",
       "Fully responsive",
     ],
-    demo: "https://reward-steve-portfolio.vercel.app/",
-    repo: "https://github.com/Reward-steve/Portfolio",
+    demo: "https://my-portfolio-sage-zeta-84.vercel.app/",
+    repo: "https://github.com/Reward-steve/my-portfolio",
   },
   {
     title: "Conference Ticket Generator 🎟️",

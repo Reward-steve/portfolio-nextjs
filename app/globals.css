@@ -34,7 +34,9 @@ body {
 h1,
 h2,
 h3 {
+  font-family: var(--font-roboto);
   color: var(--headings);
+  text-shadow: -3px -1px 9px black;
 }
 
 .navlink-effect:hover {
