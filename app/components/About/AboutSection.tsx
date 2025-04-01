@@ -93,7 +93,7 @@ export default function AboutSection() {
 
       {/* Fun Fact Section */}
       <m.footer
-        className="flex flex-col sm:flex-row justify-between items-center mt-10 w-full bg-gray-900 text-white p-6 rounded-xl"
+        className="flex flex-col sm:flex-row justify-between items-center mt-10 w-full bg-[#0000006b] text-white p-6 rounded-xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}

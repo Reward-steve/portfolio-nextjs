@@ -26,7 +26,7 @@ export default function Discription() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-cyan-400 text-2xl"
+        className="text-white text-2xl"
       >
         Hello 👋, I'm
       </m.p>
@@ -34,7 +34,7 @@ export default function Discription() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="text-6xl font-bold"
+        className="text-6xl font-bold text-cyan-400"
       >
         Reward Stephen.
       </m.h1>
@@ -47,18 +47,16 @@ export default function Discription() {
         initial={{ x: -300 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="rounded-full m-10 flex justify-between items-center gap-3"
+        className="rounded-full my-10 flex justify-between items-center gap-5"
       >
         {sociaIcons.map(({ Icon, color, iconName }, i) => (
-          <m.div
+          <div
             key={i}
-            whileHover={{ y: -5, boxShadow: "0 0 10px 0px" }}
-            transition={{ duration: 0.3 }}
             title={iconName}
-            className={`border border-1 w-15 h-15 text-gray-400 hover:text-${color} rounded-full flex cursor-pointer items-center justify-center`}
+            className={`border border-1 w-14 h-14 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 transition duration-300`}
           >
-            {<Icon size={30} className={`hover:text-${color}`} />}
-          </m.div>
+            {<Icon size={30} />}
+          </div>
         ))}
       </m.div>
     </section>

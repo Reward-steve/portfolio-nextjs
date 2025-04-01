@@ -1,5 +1,6 @@
-import { FaSquareFacebook, FaSquareInstagram, FaGithub } from "react-icons/fa6";
-import { IoLogoLinkedin } from "react-icons/io5";
+import { FaSquareFacebook, FaGithub } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
 import img1 from "../image/country.png";
 import img2 from "../image/food.png";
@@ -37,32 +38,31 @@ export const expertise = [
   "Team Collaboration",
   "Continuous Learning",
 ];
-
 export const sociaIcons = [
   {
     Icon: FaGithub,
-    color: "black",
+    color: "hover:text-black",
     iconName: "GitHub",
   },
   {
-    Icon: IoLogoLinkedin,
-    color: "blue-400",
+    Icon: FiLinkedin,
+    color: "hover:text-blue-500",
     iconName: "LinkedIn",
   },
   {
-    Icon: FaSquareInstagram,
-    color: "red-500",
+    Icon: FaInstagram,
+    color: "hover:text-red-600",
     iconName: "Instagram",
   },
   {
     Icon: CgMail,
-    color: "green-400",
+    color: "hover:text-green-500",
     iconName: "Gmail",
   },
   {
     Icon: FaSquareFacebook,
-    color: "blue-600",
-    iconName: "facebook",
+    color: "hover:text-blue-600",
+    iconName: "Facebook",
   },
 ];
 
@@ -133,9 +133,3 @@ export const projects = [
     repo: "https://github.com/Reward-steve/conference-ticket-generator-main",
   },
 ];
-
-/*## 📫 How to Reach Me  
-💼 **LinkedIn:** [**LinkedIn**](https://www.linkedin.com/in/reward-stephen-166021310/)  
-🐦 **Twitter:** [**Twitter**](https://x.com/RewardStephen)  
-📘 **Facebook:** [**Facebook**](https://facebook.com/rewardstephen)  
-📧 **Email:** rewardstephen30@gmail.com  */

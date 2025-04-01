@@ -7,7 +7,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: rgb(2, 28, 53);
+  --foreground: #0f172b;
 }
 
 @theme inline {
@@ -19,9 +19,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgb(2, 28, 53);
-    --foreground: rgba(179, 208, 255, 0.726);
-    --headings: rgb(200, 221, 255);
+    --background: #0f172b;
+    --foreground: #ffffff;
   }
 }
 
@@ -34,9 +33,9 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-roboto);
-  color: var(--headings);
-  text-shadow: -3px -1px 9px black;
+  /* font-family: var(--font-roboto);
+  color: var(--headings); */
+  /* text-shadow: -3px -1px 9px black; */
 }
 
 .navlink-effect:hover {
@@ -44,7 +43,7 @@ h3 {
   transition: 0.5s linear;
 }
 
-.navlink-effect:hover span {
+.navlink-effect span {
   background-color: rgb(0, 225, 255);
   width: 100%;
   transition: all 0.3s ease-in-out;

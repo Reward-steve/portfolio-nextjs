@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+// import { useRouter } from "next/router";
 import Button from "./buttons";
 import Link from "next/link";
 import * as m from "motion/react-client";
@@ -13,7 +14,6 @@ const mapNavigation = [
 
 export default function Navigation() {
   const [isActive, setIsActive] = useState<number | null>(null);
-
   return (
     <nav className="flex justify-between items-center w-full h-16 bg-slate-900 text-white py-10 px-10 top-0 z-50">
       <Link
@@ -52,7 +52,6 @@ export default function Navigation() {
                 className="navlink-effect flex flex-col"
                 onClick={() => setIsActive(index)}
                 href={nav.path}
-                style={{ color: active ? "cyan" : "white" }}
               >
                 {nav.linkName}
                 <span
