@@ -1,7 +1,12 @@
 import * as m from "motion/react-client";
 import Image from "next/image";
 import profile from "@/app/image/profile.jpg";
-import { SectionName, skills1, skills2, what_drives_me } from "../reusable";
+import {
+  SectionName,
+  skills1,
+  skills2,
+  what_drives_me,
+} from "../../api/data/data";
 import Link from "next/link";
 
 export default function AboutSection() {
@@ -79,14 +84,11 @@ export default function AboutSection() {
           </m.div>
         </article>
         {/* Profile Image with Hover Effect */}
-        <m.div
-          className="w-100 h-100 flex justify-center items-center rounded-xl overflow-hidden"
-          whileHover={{ scale: 1.05, rotate: 3, cursor: "pointer" }}
-        >
+        <m.div className="w-100 h-100 flex justify-center items-center rounded-xl overflow-hidden">
           <Image
             src={profile}
             alt="profile"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-[0.8]"
           />
         </m.div>
       </div>
@@ -102,7 +104,9 @@ export default function AboutSection() {
         <p className="text-lg text-center sm:text-left">
           My typing speed is{" "}
           <span className="text-cyan-400 font-semibold">
-            75 words per minute
+            <a href="http://google.com/75 words per minute">
+              75 words per minute
+            </a>
           </span>
           , helping boost my productivity and efficiency.
         </p>

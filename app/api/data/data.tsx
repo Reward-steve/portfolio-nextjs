@@ -2,10 +2,11 @@ import { FaSquareFacebook, FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
-import img1 from "../image/country.png";
-import img2 from "../image/food.png";
-import img3 from "../image/ticket.png";
-import img4 from "../image/personal.png";
+import { FaLinkedin, FaTwitter, FaFacebook, FaEnvelope } from "react-icons/fa";
+import img1 from "../../image/country.png";
+import img2 from "../../image/food.png";
+import img3 from "../../image/ticket.png";
+import img4 from "../../image/personal.png";
 
 export function SectionName({ title }: { title: string }) {
   return <h1 className="text-4xl font-bold">{title}</h1>;
@@ -76,7 +77,7 @@ export const what_drives_me = [
 
 export const projects = [
   {
-    title: "TastyHub Website 🍔",
+    title: "TastyHub Website",
     image: img2,
     cardInfo:
       "An interactive and visually appealing website for food lovers to discover and explore delicious recipes.",
@@ -91,7 +92,7 @@ export const projects = [
     repo: "https://github.com/Reward-steve/Tasty-hub",
   },
   {
-    title: "My Country App 🌍",
+    title: "My Country App",
     image: img1,
     cardInfo:
       "A web app that provides detailed information about different countries, including their flags, population, and economic data.",
@@ -105,7 +106,7 @@ export const projects = [
     repo: "https://github.com/Reward-steve/My-Country-App",
   },
   {
-    title: "Personal Portfolio 🌟",
+    title: "Personal Portfoli",
     image: img4,
     cardInfo:
       "A personal portfolio showcasing my projects and skills, built with Next.js and Tailwind CSS.",
@@ -118,7 +119,7 @@ export const projects = [
     repo: "https://github.com/Reward-steve/my-portfolio",
   },
   {
-    title: "Conference Ticket Generator 🎟️",
+    title: "Conference Ticket Generator",
     image: img3,
     cardInfo:
       "A dynamic web application that generates unique conference tickets for attendees.",
@@ -131,5 +132,43 @@ export const projects = [
     ],
     demo: "https://conference-ticket-generator-gamma.vercel.app/",
     repo: "https://github.com/Reward-steve/conference-ticket-generator-main",
+  },
+];
+
+export const how_to_reach_me = [
+  {
+    Icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/reward-stephen-166021310/",
+    link_name: "LinkedIn",
+  },
+  {
+    Icon: FaTwitter,
+    href: "https://x.com/RewardStephen",
+    link_name: "Twitter",
+  },
+  {
+    Icon: FaFacebook,
+    href: "https://facebook.com/rewardstephen",
+    link_name: "Facebook",
+  },
+  {
+    Icon: FaEnvelope,
+    href: "mailto:rewardstephen30@gmail.com",
+    link_name: "rewardstephen30@gmail.com",
+  },
+];
+
+export const contact_form = [
+  {
+    form_name: "Name",
+    place_holder: "John Doe",
+  },
+  {
+    form_name: "Email",
+    place_holder: "example@mail.com",
+  },
+  {
+    form_name: "Message",
+    place_holder: "Your message here...",
   },
 ];

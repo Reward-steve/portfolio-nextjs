@@ -21,13 +21,7 @@ export default function HeroSection() {
 
           {/* Animated Logo Section with Effects */}
           <section className="w-[500px] flex justify-center items-center h-130 relative">
-            <m.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              whileHover={{ scale: 1.1, rotate: 2 }}
-              className="w-110 h-full flex justify-center items-center relative"
-            >
+            <m.div className="w-110 h-full flex justify-center items-center relative">
               <Image
                 src={logo}
                 alt="logo"

@@ -1,5 +1,6 @@
-import { SectionName, projects } from "../reusable";
+import { SectionName, projects } from "../../api/data/data";
 import Card from "../card";
+// import { useState } from "react";
 
 export default function ProjectSection() {
   return (
@@ -18,7 +19,6 @@ export default function ProjectSection() {
               key={index}
               title={title}
               image={image as unknown as string}
-              num={String(index + 1).padStart(2, "0")} // 01, 02, 03...
               cardInfo={cardInfo}
               features={features || []}
               demo={demo || ""}

@@ -2,7 +2,7 @@
 import * as m from "motion/react-client";
 import Button from "../buttons";
 import { useEffect, useState } from "react";
-import { sociaIcons } from "../reusable";
+import { sociaIcons } from "../../api/data/data";
 
 export default function Discription() {
   const text =
@@ -42,7 +42,7 @@ export default function Discription() {
         {displayedText}
         {index < text.length && <span className="animate-bounce">|</span>}
       </m.p>
-      <Button text="Check out my projects" />
+      <Button path="/Project" text="Check out my projects" />
       <m.div
         initial={{ x: -300 }}
         whileInView={{ x: 0 }}
