@@ -10,7 +10,7 @@ import { InputField } from "../input";
 
 const POST_URL = "api/sendEmail";
 
-interface FormData {
+export interface FormData {
   Name: string;
   Email: string;
   Message: string;
@@ -86,7 +86,7 @@ export default function ContactSection() {
             <button
               type="submit"
               disabled={isSending}
-              className="w-full bg-cyan-700 cursor-pointer text-white py-2 rounded-lg hover:bg-cyan-600 transition disabled:opacity-50"
+              className="w-full bg-cyan-700 cursor-pointer text-white py-2 rounded-lg hover:bg-cyan-600 transition disabled:opacity-50 [357px]:bg-red-700"
             >
               {isSending ? "Sending..." : "Send Message"}
             </button>

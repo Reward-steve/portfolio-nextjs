@@ -37,3 +37,17 @@ export const InputField = ({
     )}
   </div>
 );
+
+/*  
+
+1️⃣ Tailwind's Default Breakpoints
+Tailwind provides default breakpoints for different screen sizes:
+
+Prefix	       Min Width	         Devices
+sm:	640px	   Small devices        (phones)
+md:	768px	   Medium devices       (tablets)
+lg:	1024px	   Large devices        (laptops)
+xl:	1280px	   Extra large screens  (desktops)
+2xl:1536px	   Very large screens
+
+*/

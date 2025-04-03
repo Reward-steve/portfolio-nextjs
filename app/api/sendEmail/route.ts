@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import * as nodemailer from "nodemailer";
 import * as dotenv from "dotenv";
+import { FormData } from "@/app/components/contact/ContactSection";
 
 dotenv.config(); // Load environment variables from .env file
 
 // Define a function that takes dynamic parameters from a form
-const sendEmail = async (email: string, username: string, message: string) => {
+const sendEmail = async (Name: string, Email: string, Message: string) => {
   try {
     // Create a transporter using your email credentials
     const transporter = nodemailer.createTransport({
@@ -17,11 +18,11 @@ const sendEmail = async (email: string, username: string, message: string) => {
     });
 
     const mailOptions = {
-      from: `"${username}" <${process.env.EMAIL_USER}>`, // Use your authenticated email
-      replyTo: email, // This makes "Reply" go to the user
+      from: `${Name} <${process.env.EMAIL_USER}>`, // Use your authenticated email
+      replyTo: Email, // This makes "Reply" go to the user
       to: process.env.EMAIL_USER, // Your receiving email
-      subject: "Get-In-Touch",
-      text: `Message from: ${username} (${email})\n\n${message}`,
+      subject: "Get in touch",
+      text: `Message from: ${Name} (${Email})\n\n${Message}`,
     };
 
     // Send email
@@ -40,10 +41,10 @@ const sendEmail = async (email: string, username: string, message: string) => {
 };
 
 export async function POST(req: Request) {
-  const { email, username, message } = await req.json();
+  const { Name, Email, Message } = await req.json();
 
   try {
-    await sendEmail(email, username, message);
+    await sendEmail(Name, Email, Message);
     return new NextResponse(
       JSON.stringify({ message: "Email sent successfully" }),
       { status: 200, statusText: "success" }

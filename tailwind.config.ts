@@ -1,26 +1,24 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}", // If using the app directory
+  ],
   theme: {
     extend: {
-      animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
-        fade: "fadeIn 2s ease-in forwards",
+      colors: {
+        primary: "#1E40AF", // Custom blue
+        secondary: "#F43F5E", // Custom red
+        dark: "#121212", // Dark mode background
       },
-      keyframes: {
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" }, // ✅ Add quotes around transform
-          "50%": { transform: "rotate(3deg)" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0" }, // ✅ Convert values to strings
-          "100%": { opacity: "1" },
-        },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+      screens: {
+        xs: "375px", // Custom breakpoint
+        "3xl": "1800px", // Extra large breakpoint
       },
     },
   },
-  plugins: [],
 };
-
-export default config;
