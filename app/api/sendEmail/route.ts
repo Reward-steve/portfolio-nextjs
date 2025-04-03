@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import * as nodemailer from "nodemailer";
 import * as dotenv from "dotenv";
-import { FormData } from "@/app/components/contact/ContactSection";
 
 dotenv.config(); // Load environment variables from .env file
 
