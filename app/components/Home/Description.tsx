@@ -2,7 +2,8 @@
 import * as m from "motion/react-client";
 import Button from "../buttons";
 import { useEffect, useState } from "react";
-import { sociaIcons } from "../../api/data/data";
+import { how_to_reach_me } from "../../api/data/data";
+import Link from "next/link";
 
 export default function Discription() {
   const text =
@@ -49,14 +50,15 @@ export default function Discription() {
         transition={{ duration: 2, ease: "easeInOut" }}
         className="rounded-full my-10 flex justify-between items-center gap-5"
       >
-        {sociaIcons.map(({ Icon, color, iconName }, i) => (
-          <div
+        {how_to_reach_me.map(({ Icon, href, link_name }, i) => (
+          <Link
+            href={href}
             key={i}
-            title={iconName}
+            title={link_name}
             className={`border border-1 w-14 h-14 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 transition duration-300`}
           >
             {<Icon size={30} />}
-          </div>
+          </Link>
         ))}
       </m.div>
     </section>

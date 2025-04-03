@@ -13,7 +13,7 @@ export default function AboutSection() {
   return (
     <>
       <SectionName title="About Me" />
-      <div className="w-full flex flex-wrap justify-between items-center">
+      <div className="w-full flex flex-wrap justify-between items-center sm:justify-around gap-10">
         {/* About Me Content */}
         <article className="w-full max-w-2xl flex flex-col">
           <m.p
@@ -84,7 +84,7 @@ export default function AboutSection() {
           </m.div>
         </article>
         {/* Profile Image with Hover Effect */}
-        <m.div className="w-100 h-100 flex justify-center items-center rounded-xl overflow-hidden">
+        <m.div className="w-100 h-100 flex justify-center items-center rounded-xl overflow-hidden sm:mt-0.5">
           <Image
             src={profile}
             alt="profile"

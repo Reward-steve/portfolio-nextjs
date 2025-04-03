@@ -13,6 +13,7 @@ const mapNavigation = [
 
 export default function Navigation() {
   const [isActive, setIsActive] = useState<number | null>(null);
+  const [dropdown, setDropdown] = useState<boolean>(false);
   return (
     <nav className="flex justify-between items-center w-full h-16 bg-slate-900 text-white py-10 px-10 top-0 z-50">
       <Link
@@ -42,11 +43,24 @@ export default function Navigation() {
           </>
         )}
       </Link>
-      <ul className="flex h-full justify-between items-center w-1/2">
+      <div
+        className="hidden dropdown-375"
+        onClick={() => setDropdown(!dropdown)}
+      >
+        <div className="line bg-cyan-400"></div>
+        <div className="line bg-cyan-400"></div>
+        <div className="line bg-cyan-400"></div>
+      </div>
+      {/* {dropdown && ( */}
+      <ul
+        className={`nav-ul-375 flex h-full justify-between items-center lg:w-1/2 sm:w-[85%] md:w-[60%] inset-x-0  ${
+          dropdown === true ? "max-[640px]:flex" : "max-[640px]:hidden"
+        }`}
+      >
         {mapNavigation.map((nav, index) => {
           const active = index === isActive;
           return (
-            <li key={index}>
+            <li className="nav-ul-li-375" key={index}>
               <Link
                 className="navlink-effect flex flex-col"
                 onClick={() => setIsActive(index)}
@@ -63,6 +77,7 @@ export default function Navigation() {
         })}
         <Button path="/Resume.pdf" text="Resume" />
       </ul>
+      {/* )} */}
     </nav>
   );
 }

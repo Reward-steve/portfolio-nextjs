@@ -29,44 +29,6 @@ export const skills2 = [
   { skill: "Chakra UI ", color: "text-cyan-400" },
 ];
 
-export const expertise = [
-  "Front-End Development",
-  "Responsive Web Design",
-  "Performance Optimization",
-  "Version Control (Git)",
-  "RESTful APIs",
-  "Problem Solving",
-  "Team Collaboration",
-  "Continuous Learning",
-];
-export const sociaIcons = [
-  {
-    Icon: FaGithub,
-    color: "hover:text-black",
-    iconName: "GitHub",
-  },
-  {
-    Icon: FiLinkedin,
-    color: "hover:text-blue-500",
-    iconName: "LinkedIn",
-  },
-  {
-    Icon: FaInstagram,
-    color: "hover:text-red-600",
-    iconName: "Instagram",
-  },
-  {
-    Icon: CgMail,
-    color: "hover:text-green-500",
-    iconName: "Gmail",
-  },
-  {
-    Icon: FaSquareFacebook,
-    color: "hover:text-blue-600",
-    iconName: "Facebook",
-  },
-];
-
 export const what_drives_me = [
   "The satisfaction of bringing ideas to life through code.",
   "A passion for learning new technologies and staying ahead of industry trends.",
@@ -136,6 +98,11 @@ export const projects = [
 ];
 
 export const how_to_reach_me = [
+  {
+    Icon: FaGithub,
+    href: "https://github.com/Reward-steve",
+    link_name: "GitHub",
+  },
   {
     Icon: FaLinkedin,
     href: "https://www.linkedin.com/in/reward-stephen-166021310/",
