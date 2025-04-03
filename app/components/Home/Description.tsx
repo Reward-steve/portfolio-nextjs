@@ -55,7 +55,7 @@ export default function Discription() {
             href={href}
             key={i}
             title={link_name}
-            className={`border border-1 w-14 h-14 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 transition duration-300`}
+            className={`border w-14 h-14 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 transition duration-300`}
           >
             {<Icon size={30} />}
           </Link>
