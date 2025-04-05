@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
+
 import Button from "./buttons";
 import Link from "next/link";
 import * as m from "motion/react-client";
+
+// import { setTimeout } from "timers/promises";
 
 const mapNavigation = [
   { path: "/About", linkName: "About Me" },
@@ -14,6 +16,7 @@ const mapNavigation = [
 export default function Navigation() {
   const [isActive, setIsActive] = useState<number | null>(null);
   const [dropdown, setDropdown] = useState<boolean>(false);
+
   return (
     <nav className="flex justify-between items-center w-full h-16 bg-slate-900 text-white py-10 px-10 top-0 z-50">
       <Link
@@ -47,14 +50,35 @@ export default function Navigation() {
         className="hidden dropdown-375"
         onClick={() => setDropdown(!dropdown)}
       >
-        <div className="line bg-cyan-400"></div>
-        <div className="line bg-cyan-400"></div>
-        <div className="line bg-cyan-400"></div>
+        <div
+          className="line  bg-cyan-400 transition: duration-300 ease-linear"
+          style={{
+            transform: `${
+              dropdown === true ? "translateX(10px)" : "translateX(2px)"
+            }`,
+          }}
+        ></div>
+        <div
+          className="line  bg-cyan-400 transition: duration-300 ease-in-out"
+          style={{
+            transform: `${
+              dropdown === true ? "translateX(0)" : "translateX(2px)"
+            }`,
+          }}
+        ></div>
+        <div
+          className="line  bg-cyan-400 transition: duration-300 ease-linear"
+          style={{
+            transform: `${
+              dropdown === true ? "translateX(10px)" : "translateX(2px)"
+            }`,
+          }}
+        ></div>
       </div>
       {/* {dropdown && ( */}
       <ul
-        className={`nav-ul-375 flex h-full justify-between items-center lg:w-1/2 sm:w-[85%] md:w-[60%] inset-x-0  ${
-          dropdown === true ? "max-[640px]:flex" : "max-[640px]:hidden"
+        className={`nav-ul-375 flex h-full justify-between items-center lg:w-1/2 sm:w-[85%] md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
+          dropdown === true ? "max-[640px]:flex" : "max-[640px]:opacity-0"
         }`}
       >
         {mapNavigation.map((nav, index) => {
@@ -63,7 +87,10 @@ export default function Navigation() {
             <li className="nav-ul-li-375" key={index}>
               <Link
                 className="navlink-effect flex flex-col"
-                onClick={() => setIsActive(index)}
+                onClick={() => {
+                  setIsActive(index);
+                  setDropdown(false);
+                }}
                 href={nav.path}
               >
                 {nav.linkName}

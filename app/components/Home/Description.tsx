@@ -22,7 +22,7 @@ export default function Discription() {
   }, [index, text]);
 
   return (
-    <section className="w-full h-150 flex flex-col gap-10 relative items-start justify-center">
+    <section className="w-full h-150 max-[375]:h-120 flex flex-col gap-10 relative items-start justify-center max-[375]:items-center max-[375]:text-center max-[375]:justify-evenly max-[375]:gap-0">
       <m.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,29 +35,32 @@ export default function Discription() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="text-6xl font-bold text-cyan-400"
+        className="text-6xl max-[375]:text-3xl font-bold text-cyan-400"
       >
         Reward Stephen.
       </m.h1>
-      <m.p transition={{ duration: 0.5, delay: 0.3 }} className="mt-2 w-3/4">
+      <m.p
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mt-2 w-3/4 max-[375]:w-full"
+      >
         {displayedText}
         {index < text.length && <span className="animate-bounce">|</span>}
       </m.p>
       <Button path="/Project" text="Check out my projects" />
       <m.div
-        initial={{ x: -300 }}
+        initial={{ x: -200 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="rounded-full my-10 flex justify-between items-center gap-5"
+        className="rounded-full flex-wrap my-10 flex justify-between items-center gap-5 max-[375]:my-0 max-[375]:gap-3"
       >
         {how_to_reach_me.map(({ Icon, href, link_name }, i) => (
           <Link
             href={href}
             key={i}
             title={link_name}
-            className={`border w-14 h-14 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 transition duration-300`}
+            className={`border w-12 h-12 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 transition duration-300`}
           >
-            {<Icon size={30} />}
+            {<Icon size={20} />}
           </Link>
         ))}
       </m.div>

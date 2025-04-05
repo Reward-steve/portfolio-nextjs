@@ -4,8 +4,8 @@ import "./globals.css";
 import "./mQuery.css";
 import Navigation from "@/app/components/navbar";
 import PageHolder from "./components/pageHolder";
-
 import { Inter, Roboto } from "next/font/google";
+import LoadingProvider from "./context/loadingProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,8 +43,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${inter.variable} ${roboto.className}`}
       >
-        <Navigation />
-        <PageHolder>{children}</PageHolder>
+        <LoadingProvider>
+          <Navigation />
+          <PageHolder>{children}</PageHolder>
+        </LoadingProvider>
       </body>
     </html>
   );
