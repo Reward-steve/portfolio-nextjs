@@ -12,7 +12,7 @@ export default function LoadingProvider({
   useEffect(() => {
     const timmer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 300);
     return () => {
       clearTimeout(timmer);
     };
