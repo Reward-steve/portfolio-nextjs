@@ -22,7 +22,7 @@ export default function Discription() {
   }, [index, text]);
 
   return (
-    <section className="w-full h-150 max-[375]:h-120 flex flex-col gap-10 relative items-start justify-center max-[375]:items-center max-[375]:text-center max-[375]:justify-evenly max-[375]:gap-0">
+    <section className="w-full sm:h-150 min-[10rem]:h-120 flex flex-col sm:gap-10 relative sm:items-start sm:justify-center min-[10rem]:items-center sm:text-left min-[10rem]:text-center min-[10rem]:justify-evenly min-[10rem]:gap-0">
       <m.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,13 +35,13 @@ export default function Discription() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="text-6xl max-[375]:text-3xl font-bold text-cyan-400"
+        className="sm:text-6xl min-[10rem]:text-3xl font-bold text-cyan-400"
       >
         Reward Stephen.
       </m.h1>
       <m.p
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-2 w-3/4 max-[375]:w-full"
+        className="mt-2 w-3/4 min-[10rem]:w-full"
       >
         {displayedText}
         {index < text.length && <span className="animate-bounce">|</span>}
@@ -51,7 +51,7 @@ export default function Discription() {
         initial={{ x: -200 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="rounded-full flex-wrap my-10 flex justify-between items-center gap-5 max-[375]:my-0 max-[375]:gap-3"
+        className="rounded-full flex-wrap sm:my-10 flex justify-between items-center gap-5 min-[10rem]:my-0 min-[10rem]:gap-3"
       >
         {how_to_reach_me.map(({ Icon, href, link_name }, i) => (
           <Link

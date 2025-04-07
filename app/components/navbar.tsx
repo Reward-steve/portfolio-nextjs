@@ -22,7 +22,10 @@ export default function Navigation() {
       <Link
         href="/"
         className="rounded-full border-1 p-3 flex justify-center relative items-center flex-col border-cyan-400 text-cyan-400 top-0 left-0 font-bold text-2xl drop-shadow-2x transition-all duration-300"
-        onClick={() => setIsActive(null)}
+        onClick={() => {
+          setIsActive(null);
+          setDropdown(false);
+        }}
         style={{
           textShadow: isActive === null ? "0 0 20px cyan" : "",
           transition: "text-shadow 0.3s ease-in-out",
@@ -51,35 +54,26 @@ export default function Navigation() {
         onClick={() => setDropdown(!dropdown)}
       >
         <div
-          className="line  bg-cyan-400 transition: duration-300 ease-linear"
-          style={{
-            transform: `${
-              dropdown === true ? "translateX(10px)" : "translateX(2px)"
-            }`,
-          }}
+          className={`line  bg-cyan-400 transition: duration-300 ease-linear ${
+            dropdown ? "rotate-[-45deg] translate-y-2" : ""
+          }`}
         ></div>
         <div
-          className="line  bg-cyan-400 transition: duration-300 ease-in-out"
-          style={{
-            transform: `${
-              dropdown === true ? "translateX(0)" : "translateX(2px)"
-            }`,
-          }}
+          className={`line bg-red-400 transition: duration-300 ease-in-out ${
+            dropdown ? "translate-x-1/2 opacity-0" : ""
+          }`}
         ></div>
         <div
-          className="line  bg-cyan-400 transition: duration-300 ease-linear"
-          style={{
-            transform: `${
-              dropdown === true ? "translateX(10px)" : "translateX(2px)"
-            }`,
-          }}
+          className={`line  bg-cyan-400 transition: duration-300 ease-linear ${
+            dropdown ? "rotate-45 translate-y-[-9px]" : ""
+          }`}
         ></div>
       </div>
-      {/* {dropdown && ( */}
+
       <ul
-        className={`nav-ul-375 flex h-full justify-between items-center lg:w-1/2 sm:w-[85%] md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
-          dropdown === true ? "max-[640px]:flex" : "max-[640px]:opacity-0"
-        }`}
+        className={`nav-ul-375 flex h-full justify-between items-center sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
+          dropdown ? "min-[10rem]:flex" : "min-[10rem]:opacity-0"
+        } `}
       >
         {mapNavigation.map((nav, index) => {
           const active = index === isActive;
@@ -104,7 +98,6 @@ export default function Navigation() {
         })}
         <Button path="/Resume.pdf" text="Resume" />
       </ul>
-      {/* )} */}
     </nav>
   );
 }
