@@ -1,7 +1,4 @@
-import { FaSquareFacebook, FaGithub } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { FiLinkedin } from "react-icons/fi";
-import { CgMail } from "react-icons/cg";
+import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin, FaTwitter, FaFacebook, FaEnvelope } from "react-icons/fa";
 import img1 from "../../image/country.png";
 import img2 from "../../image/food.png";

@@ -68,7 +68,7 @@ export default function Description() {
             href={href}
             key={i}
             title={link_name}
-            className="border w-12 h-12 text-cyan-600 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 hover:bg-gradient-to-r hover:from-black hover:to-transparent hover:shadow-inner hover:shadow-cyan-400 transition duration-300"
+            className="border w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 hover:shadow-cyan-400 transition duration-300"
           >
             <Icon size={20} />
           </Link>
