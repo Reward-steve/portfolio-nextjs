@@ -16,7 +16,6 @@
       justify-content: space-evenly;
       align-items: baseline;
       padding-left: 3em;
-      /* display: none; */
     }
 
     .dropdown-375 {
@@ -29,42 +28,4 @@
       cursor: pointer;
     }
   }
-  /* @media (min-width: 375px) {
-    .nav-ul-375 {
-      position: absolute;
-      flex-direction: column;
-      z-index: 23;
-      color: white;
-      backdrop-filter: blur(7px);
-      background: linear-gradient(45deg, rgba(0, 0, 0, 0.368), #0f172b);
-      width: 50%;
-      border-right: none;
-      border: 1px solid rgba(128, 128, 128, 0.415);
-      top: 80px;
-      right: 0;
-      height: 25em;
-      border-radius: 0 0 0 10px;
-      justify-content: space-evenly;
-      align-items: baseline;
-      padding-left: 20px;
-    }
-
-    .dropdown-375 {
-      width: 30px;
-      height: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
-      cursor: pointer;
-    }
-  } */
 }
-
-/* 
-Breakpoint prefix	Minimum width	CSS
-sm	40rem (640px)	@media (width >= 40rem) { ... }
-md	48rem (768px)	@media (width >= 48rem) { ... }
-lg	64rem (1024px)	@media (width >= 64rem) { ... }
-xl	80rem (1280px)	@media (width >= 80rem) { ... }
-2xl	96rem (1536px)	@media (width >= 96rem) { ... } */
