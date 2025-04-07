@@ -1,6 +1,7 @@
 "use client";
 import * as m from "motion/react-client";
 import { useLazyLoading } from "../hook/useLazyLoading";
+import { useState, useEffect } from "react";
 
 export default function PageHolder({
   children,
@@ -8,7 +9,14 @@ export default function PageHolder({
   children: React.ReactNode;
 }) {
   const { isLoading } = useLazyLoading();
-  return isLoading ? (
+
+  // Default to `false` during SSR
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  return !hydrated || isLoading ? (
     <div className="w-full flex h-[80vh] justify-center items-center bg-linear-90 bg-#000">
       <p className="animate-pulse w-10 h-10 text-md">Loading...</p>
     </div>
