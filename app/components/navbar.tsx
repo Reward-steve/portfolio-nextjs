@@ -92,7 +92,7 @@ export default function Navigation() {
 
       {/* Navigation Links */}
       <ul
-        className={`nav-ul-375 flex h-full justify-between items-center sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
+        className={`nav-ul-375 flex h-full justify-between items-center min-[40rem]:flex sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
           dropdown ? "min-[10rem]:flex" : "min-[10rem]:hidden"
         }`}
       >
