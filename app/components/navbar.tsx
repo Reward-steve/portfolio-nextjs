@@ -5,9 +5,9 @@ import Link from "next/link";
 import * as m from "motion/react-client";
 
 const mapNavigation = [
-  { path: "/About", linkName: "About Me" },
-  { path: "/Project", linkName: "Projects I've Built" },
-  { path: "/Contact", linkName: "Contact Me" },
+  { path: "/about", linkName: "About Me" },
+  { path: "/project", linkName: "Projects" },
+  { path: "/contact", linkName: "Contact Me" },
 ];
 
 export default function Navigation() {
@@ -93,7 +93,7 @@ export default function Navigation() {
       {/* Navigation Links */}
       <ul
         className={`nav-ul-375 flex h-full justify-between items-center sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
-          dropdown ? "min-[10rem]:flex" : "min-[10rem]:opacity-0"
+          dropdown ? "min-[10rem]:flex" : "min-[10rem]:hidden"
         }`}
       >
         {renderNavLinks()}
