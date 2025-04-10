@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "./buttons";
 import Link from "next/link";
 import * as m from "motion/react-client";
+import ThemeToggle from "./ThemeToggle";
 
 const mapNavigation = [
   { path: "/about", linkName: "About Me" },
@@ -42,7 +43,7 @@ export default function Navigation() {
       return (
         <li className="nav-ul-li-375" key={index}>
           <Link
-            className="navlink-effect flex flex-col"
+            className="navlink-effect flex flex-col "
             onClick={() => handleLinkClick(index)}
             href={nav.path}
           >
@@ -97,7 +98,11 @@ export default function Navigation() {
         }`}
       >
         {renderNavLinks()}
+        <ThemeToggle />
         <Button path="/Resume.pdf" text="Resume" />
+        <div className="bg-white text-black dark:bg-[#0f172b] dark:text-white">
+          This div changes based on the selected theme.
+        </div>
       </ul>
     </nav>
   );

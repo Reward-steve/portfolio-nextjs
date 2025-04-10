@@ -6,6 +6,7 @@ import Navigation from "@/app/components/navbar";
 import PageHolder from "./components/pageHolder";
 import { Inter, Roboto } from "next/font/google";
 import LoadingProvider from "./context/loadingProvider";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   description:
     "I'm Reward Stephen, a frontend developer building beautiful and functional web applications.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.jpeg",
   },
 };
 
@@ -48,8 +49,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${inter.variable} ${roboto.className}`}
       >
         <LoadingProvider>
-          <Navigation />
-          <PageHolder>{children}</PageHolder>
+          <ThemeProvider attribute={"class"} defaultTheme="system">
+            <Navigation />
+            <PageHolder>{children}</PageHolder>
+          </ThemeProvider>
         </LoadingProvider>
       </body>
     </html>
