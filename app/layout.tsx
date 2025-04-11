@@ -22,7 +22,7 @@ export default function RootLayout({
           content="I'm Reward Stephen, a frontend developer building beautiful and functional web applications."
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased bg-[#c6e5ff] text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b]">
         <LoadingProvider>
           <ThemeProvider attribute="class">
             <Navigation />

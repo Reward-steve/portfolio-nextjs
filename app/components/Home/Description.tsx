@@ -23,13 +23,13 @@ export default function Description() {
   }, [index, text]);
 
   return (
-    <section className="w-full sm:h-150 min-[10rem]:h-120 flex flex-col sm:gap-10 relative sm:items-start sm:justify-center min-[10rem]:items-center sm:text-left min-[10rem]:text-center min-[10rem]:justify-evenly min-[10rem]:gap-0">
+    <section className="w-full sm:h-150 min-[10rem]:h-120 flex flex-col sm:gap-10 relative sm:items-start sm:justify-center min-[10rem]:items-center sm:text-left min-[10rem]:text-center min-[10rem]:justify-evenly min-[10rem]:gap-0 ">
       {/* Greeting */}
       <m.p
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-white text-2xl"
+        className="text-2xl"
       >
         Hello 👋, I'm
       </m.p>
@@ -39,7 +39,7 @@ export default function Description() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="sm:text-6xl min-[10rem]:text-3xl font-bold text-cyan-400"
+        className="sm:text-6xl min-[10rem]:text-3xl font-bold text-cyan-800 dark:text-cyan-400"
       >
         Reward Stephen.
       </m.h1>
@@ -68,7 +68,7 @@ export default function Description() {
             href={href}
             key={i}
             title={link_name}
-            className="border w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:text-cyan-400 hover:shadow-cyan-400 transition duration-300"
+            className="border border-cyan-500 dark:hover:text-cyan-400 dark:hover:border-cyan-900 hover:text-cyan-900 w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:shadow-cyan-400 transition duration-300"
           >
             <Icon size={20} />
           </Link>
