@@ -29,7 +29,7 @@ export default function Card({
       </div>
 
       {/* Text Section */}
-      <article className="flex flex-col gap-4 w-full lg:w-1/2 text-white px-4">
+      <article className="flex flex-col gap-4 w-full lg:w-1/2 px-4">
         <header className="flex justify-start items-center">
           {title && (
             <h2 className="text-3xl font-bold text-cyan-600">{title}</h2>
@@ -39,7 +39,7 @@ export default function Card({
 
         {/* Features */}
         {features && features.length > 0 && (
-          <ul className="list-disc list-inside text-gray-400 text-sm">
+          <ul className="list-disc list-inside text-sm">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
