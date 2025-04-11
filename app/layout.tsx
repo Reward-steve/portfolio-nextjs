@@ -1,42 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import "./mQuery.css";
+"use client";
+
 import Navigation from "@/app/components/navbar";
 import PageHolder from "./components/pageHolder";
-import { Inter, Roboto } from "next/font/google";
 import LoadingProvider from "./context/loadingProvider";
 import { ThemeProvider } from "next-themes";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter", // Optional: Use CSS variable
-});
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "700"], // Choose specific weights
-  display: "swap",
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Reward Stephen | Frontend Developer",
-  description:
-    "I'm Reward Stephen, a frontend developer building beautiful and functional web applications.",
-  icons: {
-    icon: "/icon.jpeg",
-  },
-};
+import "../app/globals.css"; // Fixed path
+import "../app/mQuery.css"; // Fixed path
 
 export default function RootLayout({
   children,
@@ -45,11 +14,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${inter.variable} ${roboto.className}`}
-      >
+      <head>
+        <link rel="icon" href="/icon.jpeg" sizes="any" />
+        <title>Reward Stephen | Frontend Developer</title>
+        <meta
+          name="description"
+          content="I'm Reward Stephen, a frontend developer building beautiful and functional web applications."
+        />
+      </head>
+      <body className="antialiased">
         <LoadingProvider>
-          <ThemeProvider attribute={"class"} defaultTheme="system">
+          <ThemeProvider attribute="class">
             <Navigation />
             <PageHolder>{children}</PageHolder>
           </ThemeProvider>

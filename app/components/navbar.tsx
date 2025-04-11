@@ -100,9 +100,6 @@ export default function Navigation() {
         {renderNavLinks()}
         <ThemeToggle />
         <Button path="/Resume.pdf" text="Resume" />
-        <div className="bg-white text-black dark:bg-[#0f172b] dark:text-white">
-          This div changes based on the selected theme.
-        </div>
       </ul>
     </nav>
   );
