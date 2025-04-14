@@ -18,10 +18,6 @@ export default function LoadingProvider({
     };
   });
 
-  useEffect(() => {
-    console.log("isLoading", isLoading);
-  }, [isLoading]);
-
   return (
     <lazyContext.Provider value={{ isLoading }}>
       {children}

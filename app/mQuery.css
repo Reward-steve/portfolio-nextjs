@@ -6,14 +6,12 @@
 @layer utilities {
   @media (max-width: 639px) {
     .nav-ul-375 {
-      position: absolute;
       flex-direction: column;
       z-index: 23;
       color: white;
-      backdrop-filter: blur(7px);
-      background: linear-gradient(45deg, rgba(0, 0, 0, 0.368), #0f172b);
       border-right: none;
       border: 1px solid rgba(128, 128, 128, 0.415);
+      position: absolute;
       top: 80px;
       height: 25em;
       border-radius: 0 0 0 10px;
@@ -23,8 +21,9 @@
     }
 
     .dropdown-375 {
-      width: 30px;
-      height: 20px;
+      width: 50px;
+      height: 50px;
+      padding: 16px 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,4 +31,23 @@
       cursor: pointer;
     }
   }
+
+  @media (min-width: 0px) and (max-width: 639px) {
+    .drop {
+      display: none;
+    }
+    .description {
+      height: 500px;
+      gap: 0;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+    .home {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media (max-width: 375px) {
 }

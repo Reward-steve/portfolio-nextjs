@@ -17,9 +17,9 @@ export default function Card({
   repo?: string;
 }) {
   return (
-    <section className=" w-[90%] mx-auto flex flex-col lg:flex-row items-center bg-gray-900/50 border border-gray-700 rounded-xl p-6 shadow-lg hover:border-gray-600 transition-transform duration-300 easeInOut cursor-pointer">
+    <section className=" w-full mx-auto flex flex-col lg:flex-row items-center bg-gray-900/50 border border-gray-700 rounded-xl p-6 shadow-lg hover:border-gray-600 transition-transform duration-300 easeInOut cursor-pointer">
       {/* Image Section */}
-      <div className="w-full lg:w-1/2 flex justify-center">
+      <div className="w-full lg:w-1/2 flex justify-center sm:h-auto h-[300]">
         <Image
           src={image}
           alt="Project image"
@@ -32,10 +32,12 @@ export default function Card({
       <article className="flex flex-col gap-4 w-full lg:w-1/2 px-4">
         <header className="flex justify-start items-center">
           {title && (
-            <h2 className="text-3xl font-bold text-cyan-600">{title}</h2>
+            <h2 className="my-3 sm:text-3xl text-xl font-bold text-[#104455] dark:text-cyan-600">
+              {title}
+            </h2>
           )}
         </header>
-        <p className="text-gray-300 text-lg">{cardInfo}</p>
+        <p className="text-lg">{cardInfo}</p>
 
         {/* Features */}
         {features && features.length > 0 && (

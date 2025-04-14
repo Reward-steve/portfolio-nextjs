@@ -39,7 +39,9 @@ export default function AboutSection() {
             <ul className="mt-4 text-lg space-y-2">
               {what_drives_me.map((drive, index) => (
                 <m.li key={index} className="flex items-center gap-2">
-                  <span className="font-bold text-cyan-400 text-xl">*</span>{" "}
+                  <span className="font-bold dark:text-cyan-400 text-xl">
+                    *
+                  </span>{" "}
                   {drive}
                 </m.li>
               ))}
@@ -69,7 +71,9 @@ export default function AboutSection() {
                       transition={{ type: "spring", stiffness: 500 }}
                       className={"flex items-center gap-2"}
                     >
-                      <span className="font-bold text-cyan-400 text-xl">*</span>{" "}
+                      <span className="font-bold dark:text-cyan-400 text-xl">
+                        *
+                      </span>{" "}
                       <Link
                         className={`${skill.color}`}
                         href={`https://www.google.com/search?q=${skill.skill}`}
@@ -84,7 +88,7 @@ export default function AboutSection() {
           </m.div>
         </article>
         {/* Profile Image with Hover Effect */}
-        <m.div className="w-100 h-100 flex justify-center items-center rounded-xl overflow-hidden sm:mt-0.5">
+        <m.div className="w-[500] h-[500] flex justify-center items-center rounded-xl overflow-hidden sm:mt-0.5">
           <Image
             src={profile}
             alt="profile"
@@ -95,7 +99,7 @@ export default function AboutSection() {
 
       {/* Fun Fact Section */}
       <m.footer
-        className="flex flex-col sm:flex-row justify-between items-center mt-10 w-full bg-[#0000006b] text-white p-6 rounded-xl"
+        className="flex flex-col sm:flex-row justify-between items-center mt-10 w-full bg-[#0000006b] p-6 rounded-xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
