@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
-import Button from "./buttons";
-import Link from "next/link";
 import * as m from "motion/react-client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import Button from "./buttons";
 
 const mapNavigation = [
   { path: "/about", linkName: "About Me" },
@@ -14,6 +14,21 @@ const mapNavigation = [
 export default function Navigation() {
   const [isActive, setIsActive] = useState<number | null>(null);
   const [dropdown, setDropdown] = useState<boolean>(false);
+  const [scrollY, setScrollY] = useState<number>(0);
+
+  const handleFixedNav = () => {
+    setScrollY(window.scrollY);
+    if (scrollY > 100) {
+      setDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleFixedNav);
+    return () => {
+      window.removeEventListener("scroll", handleFixedNav);
+    };
+  }, [scrollY]);
 
   const handleLinkClick = (index: number | null) => {
     setIsActive(index);
@@ -22,12 +37,12 @@ export default function Navigation() {
 
   const renderRotatingBorders = () => (
     <>
-      <m.div
+      <m.span
         initial={{ rotate: 0 }}
         animate={{ rotate: -360 }}
         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         className="rounded-full border-[1px] px-5 w-17.5 h-14 absolute bottom-0 border-cyan-900 dark:border-cyan-500 text-cyan-40"
-      ></m.div>
+      ></m.span>
       <m.div
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}
@@ -43,13 +58,13 @@ export default function Navigation() {
       return (
         <li className="nav-ul-li-375" key={index}>
           <Link
-            className="navlink-effect flex flex-col "
+            className="navlink-effect flex flex-col dark:text-[#c6e5ff] text-black"
             onClick={() => handleLinkClick(index)}
             href={nav.path}
           >
             {nav.linkName}
             <span
-              className="w-0 h-[1px] bg-cyan-400"
+              className="w-0 h-[1px] dark:bg-cyan-400 bg-cyan-800"
               style={{ width: active ? "100%" : 0 }}
             ></span>
           </Link>
@@ -58,10 +73,14 @@ export default function Navigation() {
     });
 
   return (
-    <nav className="flex justify-between items-center w-full h-16 bg-[#c6e5ff] text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] py-10 px-10 top-0 z-50">
+    <nav
+      className={`flex justify-between items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] py-10 px-10 top-0 z-50 ${
+        scrollY > 10 ? "fixed shadow-md" : ""
+      } `}
+    >
       <Link
         href="/"
-        className="rounded-full border-1 p-3 flex justify-center relative items-center flex-col border-cyan-400 text-[#155e75] dark:text-cyan-400 top-0 left-0 font-bold text-2xl drop-shadow-2x transition-all duration-300"
+        className="rounded-full border-1 p-3 flex justify-center relative items-center flex-col border-cyan-400 text-cyan-800 dark:text-cyan-400 top-0 left-0 font-bold text-2xl drop-shadow-2x transition-all duration-300"
         onClick={() => handleLinkClick(null)}
         style={{
           textShadow: isActive === null ? "0 0 20px cyan" : "",
@@ -78,13 +97,13 @@ export default function Navigation() {
         onClick={() => setDropdown(!dropdown)}
       >
         {[
-          "rotate-[-45deg] translate-y-2",
+          "rotate-[-45deg] translate-y-2 translate-x-0.2",
           "translate-x-1/2 opacity-0",
-          "rotate-45 translate-y-[-9px]",
+          "rotate-45 translate-y-[-7px] translate-x-0",
         ].map((transform, index) => (
           <div
             key={index}
-            className={`line bg-cyan-400 transition: duration-300 ease-linear ${
+            className={`line bg-cyan-800 dark:bg-cyan-400 transition: duration-300 ease-linear ${
               dropdown ? transform : ""
             }`}
           ></div>
@@ -93,8 +112,8 @@ export default function Navigation() {
 
       {/* Navigation Links */}
       <ul
-        className={`nav-ul-375 flex h-full justify-between items-center min-[40rem]:flex sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out ${
-          dropdown ? "min-[10rem]:flex" : "min-[10rem]:hidden"
+        className={`nav-ul-375 flex h-full justify-between items-center sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out dark:bg-[#0f172b] bg-white ${
+          dropdown ? "flex" : "drop"
         }`}
       >
         {renderNavLinks()}

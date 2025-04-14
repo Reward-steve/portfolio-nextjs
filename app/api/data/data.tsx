@@ -19,7 +19,7 @@ export const skills1 = [
 ];
 export const skills2 = [
   { skill: "React.js ", color: "text-blue-400" },
-  { skill: "Next.js ", color: "text-white" },
+  { skill: "Next.js ", color: "dark:text-white" },
   { skill: "TypeScript ", color: "text-blue-400" },
   { skill: "Tailwind CSS ", color: "text-cyan-400" },
   { skill: "Scss ", color: "text-pink-400" },

@@ -22,7 +22,7 @@ export default function PageHolder({
     </div>
   ) : (
     <m.section
-      className="w-full flex flex-col gap-10 p-10 max-[375]:p-5 bg-[#c6e5ff] text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] rounded-xl"
+      className="w-full flex flex-col gap-10 sm:p-10 p-5 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] rounded-xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

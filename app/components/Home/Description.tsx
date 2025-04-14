@@ -23,7 +23,7 @@ export default function Description() {
   }, [index, text]);
 
   return (
-    <section className="w-full sm:h-150 min-[10rem]:h-120 flex flex-col sm:gap-10 relative sm:items-start sm:justify-center min-[10rem]:items-center sm:text-left min-[10rem]:text-center min-[10rem]:justify-evenly min-[10rem]:gap-0 ">
+    <section className="xl:justify-start xl:items-start xl:text-start justify-center text-center items-center w-full description h-150 flex flex-col gap-10 relative">
       {/* Greeting */}
       <m.p
         initial={{ opacity: 0, y: 40 }}
@@ -39,7 +39,7 @@ export default function Description() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="sm:text-6xl min-[10rem]:text-3xl font-bold text-cyan-800 dark:text-cyan-400"
+        className="sm:text-6xl text-5xl font-bold text-cyan-800 dark:text-cyan-400 w-full"
       >
         Reward Stephen.
       </m.h1>
@@ -47,28 +47,28 @@ export default function Description() {
       {/* Typing Effect */}
       <m.p
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-2 w-3/4 min-[10rem]:w-full"
+        className="mt-2 sm:w-3/4 w-full"
       >
         {displayedText}
         {index < text.length && <span className="animate-bounce">|</span>}
       </m.p>
 
       {/* Button */}
-      <Button path="/Project" text="Check out my projects" />
+      <Button path="/project" text="Check out my projects" />
 
       {/* Social Links */}
       <m.div
         initial={{ x: -200 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="rounded-full flex-wrap sm:my-10 flex justify-between items-center gap-5 min-[10rem]:my-0 min-[10rem]:gap-3"
+        className="rounded-full flex-wrap sm:my-10 flex justify-between items-center sm:gap-5  my-0  gap-3"
       >
         {how_to_reach_me.map(({ Icon, href, link_name }, i) => (
           <Link
             href={href}
             key={i}
             title={link_name}
-            className="border border-cyan-500 dark:hover:text-cyan-400 dark:hover:border-cyan-900 hover:text-cyan-900 w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:shadow-cyan-400 transition duration-300"
+            className="border-2 hover:rotate-[360deg] border-dotted border-cyan-500 dark:hover:text-cyan-400 dark:hover:border-cyan-900 hover:text-cyan-900 w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:shadow-cyan-400 transition duration-300"
           >
             <Icon size={20} />
           </Link>
