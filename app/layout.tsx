@@ -1,5 +1,5 @@
 "use client";
-import Navigation from "@/app/components/navbar";
+import Navigation from "./components/navbar";
 import PageHolder from "./components/pageHolder";
 import LoadingProvider from "./context/loadingProvider";
 import { ThemeProvider } from "next-themes";

@@ -2,7 +2,7 @@ import logo from "@/app/image/developer-logo.png";
 import Image from "next/image";
 import * as m from "motion/react-client";
 import { domAnimation, LazyMotion } from "motion/react";
-import Description from "../Home/Description";
+import Description from "../_Home/Description";
 
 export default function HeroSection() {
   return (
