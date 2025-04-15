@@ -1,5 +1,5 @@
-import { Home } from "./home/page";
+import HeroSection from "./components/_Home/HeroSection";
 
 export default function App() {
-  return <Home />;
+  return <HeroSection />;
 }
