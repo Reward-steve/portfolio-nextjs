@@ -39,7 +39,7 @@ export default function Description() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="sm:text-6xl text-5xl font-bold text-cyan-800 dark:text-cyan-400 w-full"
+        className="sm:text-6xl text-5xl font-bold text-cyan-800 dark_tx_glow w-full"
       >
         Reward Stephen.
       </m.h1>
@@ -68,7 +68,7 @@ export default function Description() {
             href={href}
             key={i}
             title={link_name}
-            className="border-2 hover:rotate-[360deg] border-dotted border-cyan-500 dark:hover:text-cyan-400 dark:hover:border-cyan-900 hover:text-cyan-900 w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:shadow-cyan-400 transition duration-300"
+            className="border-2 hover:rotate-[360deg] border-dotted border-cyan-500 dark:hover:text-cyan-400 hover_dark_border hover:text-cyan-900 w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:shadow-cyan-400 transition duration-300"
           >
             <Icon size={20} />
           </Link>

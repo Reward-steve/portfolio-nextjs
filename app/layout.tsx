@@ -3,27 +3,50 @@ import Navigation from "./components/navbar";
 import PageHolder from "./components/pageHolder";
 import LoadingProvider from "./context/loadingProvider";
 import { ThemeProvider } from "next-themes";
-import "../app/globals.css"; // Fixed path
-import "../app/mQuery.css"; // Fixed path
-
+// import Head from "next/head"; // Import Head for proper handling of metadata
+import "../app/style/globals.css"; // Ensure correct path
+import "../app/style/mQuery.css"; // Ensure correct path
+// import { metadata } from "./api/data/data";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
-      <head>
-        <link rel="icon" href="/icon.jpeg" sizes="any" />
-        <title>Reward Stephen | Frontend Developer</title>
+    <html lang="en">
+      {/* <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Explore Reward Stephen's portfolio" />
         <meta
-          name="description"
-          content="I'm Reward Stephen, a frontend developer building beautiful and functional web applications."
+          name="keywords"
+          content="Frontend Developer, Portfolio, React Developer, Next.js"
         />
-      </head>
-      <body className="antialiased bg-[#ffffff] text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b]">
+        <meta name="author" content="Reward Stephen" />
+        <link rel="icon" href="/icon.jpeg" sizes="any" />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta
+          name="twitter:description"
+          content={metadata.twitter.description}
+        />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+      </Head> */}
+      <body className="antialiased bg-[#ffffff] text-[#0f172b] dark_bg dark_tx">
         <LoadingProvider>
-          <ThemeProvider attribute="class">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light" // Set a default theme
+            enableSystem={true} // Enable system preference
+          >
             <Navigation />
             <PageHolder>{children}</PageHolder>
           </ThemeProvider>
