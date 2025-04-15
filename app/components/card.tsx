@@ -32,7 +32,7 @@ export default function Card({
       <article className="flex flex-col gap-4 w-full lg:w-1/2 px-4">
         <header className="flex justify-start items-center">
           {title && (
-            <h2 className="my-3 sm:text-3xl text-xl font-bold text-[#104455] dark:text-cyan-600">
+            <h2 className="my-3 sm:text-3xl text-xl font-bold text-[#104455] dark_tx_glow">
               {title}
             </h2>
           )}

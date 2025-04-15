@@ -21,7 +21,7 @@ export default function PageHolder({
       <p className="animate-pulse w-10 h-10 text-md">Loading...</p>
     </div>
   ) : (
-    <m.section
+    <m.div
       className="w-full flex flex-col gap-10 sm:p-10 p-5 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] rounded-xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -29,6 +29,6 @@ export default function PageHolder({
       style={{ borderTop: "0.5px solid #515151" }}
     >
       {children}
-    </m.section>
+    </m.div>
   );
 }

@@ -39,9 +39,7 @@ export default function AboutSection() {
             <ul className="mt-4 text-lg space-y-2">
               {what_drives_me.map((drive, index) => (
                 <m.li key={index} className="flex items-center gap-2">
-                  <span className="font-bold dark:text-cyan-400 text-xl">
-                    *
-                  </span>{" "}
+                  <span className="font-bold dark_tx_glow text-xl">*</span>{" "}
                   {drive}
                 </m.li>
               ))}
@@ -71,9 +69,7 @@ export default function AboutSection() {
                       transition={{ type: "spring", stiffness: 500 }}
                       className={"flex items-center gap-2"}
                     >
-                      <span className="font-bold dark:text-cyan-400 text-xl">
-                        *
-                      </span>{" "}
+                      <span className="font-bold dark_tx_glow text-xl">*</span>{" "}
                       <Link
                         className={`${skill.color}`}
                         href={`https://www.google.com/search?q=${skill.skill}`}
