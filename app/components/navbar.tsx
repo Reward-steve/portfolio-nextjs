@@ -6,9 +6,9 @@ import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
 
 const mapNavigation = [
-  { path: "/about", linkName: "About Me" },
-  { path: "/project", linkName: "Projects" },
-  { path: "/contact", linkName: "Contact Me" },
+  { path: "../about", linkName: "About Me" },
+  { path: "../project", linkName: "Projects" },
+  { path: "../contact", linkName: "Contact Me" },
 ];
 
 export default function Navigation() {
