@@ -3,9 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .dark_border {
-  @apply;
-} */
 .dark_bg {
   @apply dark:bg-[#0f172b];
 }

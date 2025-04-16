@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { TbBulbFilled, TbBulbOff } from "react-icons/tb";
 
 export default function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme(); // Use resolvedTheme for SSR compatibility
+  const { theme, setTheme } = useTheme(); // Use resolvedTheme for SSR compatibility
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,11 +15,11 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="px-4 py-2 rounded-full transition-colors duration-300 ease-in-out outline-none border-none"
       title="Toggle theme"
     >
-      {resolvedTheme === "dark" ? (
+      {theme === "dark" ? (
         <TbBulbFilled
           color="orange"
           size={25}

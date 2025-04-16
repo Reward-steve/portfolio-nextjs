@@ -1,20 +1,20 @@
 "use client";
+import { metadata } from "./api/data/data";
 import Navigation from "./components/navbar";
 import PageHolder from "./components/pageHolder";
 import LoadingProvider from "./context/loadingProvider";
 import { ThemeProvider } from "next-themes";
-// import Head from "next/head"; // Import Head for proper handling of metadata
+import Head from "next/head"; // Import Head for proper handling of metadata
 import "./style/globals.css";
 import "./style/mQuery.css";
-// import { metadata } from "./api/data/data";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      {/* <Head>
+    <html lang="en" className="light" style={{ colorScheme: "light" }}>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Explore Reward Stephen's portfolio" />
@@ -39,7 +39,7 @@ export default function RootLayout({
           content={metadata.twitter.description}
         />
         <meta name="twitter:image" content={metadata.twitter.images[0]} />
-      </Head> */}
+      </Head>
       <body className="antialiased bg-[#ffffff] text-[#0f172b] dark_bg dark_tx">
         <LoadingProvider>
           <ThemeProvider
