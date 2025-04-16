@@ -4,8 +4,8 @@ import PageHolder from "./components/pageHolder";
 import LoadingProvider from "./context/loadingProvider";
 import { ThemeProvider } from "next-themes";
 // import Head from "next/head"; // Import Head for proper handling of metadata
-import "../app/style/globals.css"; // Ensure correct path
-import "../app/style/mQuery.css"; // Ensure correct path
+import "./style/globals.css";
+import "./style/mQuery.css";
 // import { metadata } from "./api/data/data";
 export default function RootLayout({
   children,
