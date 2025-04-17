@@ -6,9 +6,9 @@ import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
 
 const mapNavigation = [
-  { path: "../about", linkName: "About Me" },
-  { path: "../project", linkName: "Projects" },
-  { path: "../contact", linkName: "Contact Me" },
+  { path: "/about", linkName: "About" },
+  { path: "/project", linkName: "Projects" },
+  { path: "/contact", linkName: "Get in touch" },
 ];
 
 export default function Navigation() {
@@ -53,16 +53,16 @@ export default function Navigation() {
   );
 
   const renderNavLinks = () =>
-    mapNavigation.map((nav, index) => {
+    mapNavigation.map(({ path, linkName }, index) => {
       const active = index === isActive;
       return (
         <li className="nav-ul-li-375" key={index}>
           <Link
             className="navlink-effect flex flex-col dark:text-[#c6e5ff] text-black"
             onClick={() => handleLinkClick(index)}
-            href={nav.path}
+            href={path}
           >
-            {nav.linkName}
+            {linkName}
             <span
               className="w-0 h-[1px] dark:bg-cyan-400 bg-cyan-800"
               style={{ width: active ? "100%" : 0 }}
@@ -75,7 +75,7 @@ export default function Navigation() {
   return (
     <nav
       className={`flex justify-between items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] py-10 px-10 top-0 z-50 ${
-        scrollY > 10 ? "fixed shadow-md" : ""
+        scrollY > 200 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
       } `}
     >
       <Link
