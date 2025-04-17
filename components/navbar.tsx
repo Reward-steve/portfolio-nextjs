@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
-// import "../app/about/page";
 
 const mapNavigation = [
   { path: "/about", linkName: "About" },
@@ -59,9 +58,9 @@ export default function Navigation() {
       return (
         <li className="nav-ul-li-375" key={index}>
           <Link
+            href={path}
             className="navlink-effect flex flex-col dark:text-[#c6e5ff] text-black"
             onClick={() => handleLinkClick(index)}
-            href={path}
           >
             {linkName}
             <span
