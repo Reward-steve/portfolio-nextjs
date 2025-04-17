@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
+// import "../app/about/page";
 
 const mapNavigation = [
   { path: "/about", linkName: "About" },
@@ -92,6 +93,7 @@ export default function Navigation() {
       </Link>
 
       {/* Dropdown Toggle */}
+      <Link href={"/project"}>Test</Link>
       <div
         className="hidden dropdown-375"
         onClick={() => setDropdown(!dropdown)}
