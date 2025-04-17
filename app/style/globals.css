@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.do {
+  -webkit-text-stroke: 1px cyan;
+  color: transparent;
+}
 .dark_bg {
   @apply dark:bg-[#0f172b];
 }

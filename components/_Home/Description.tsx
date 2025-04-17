@@ -23,7 +23,7 @@ export default function Description() {
   }, [index, text]);
 
   return (
-    <section className="xl:justify-start xl:items-start xl:text-start justify-center text-center items-center w-full description h-150 flex flex-col gap-10 relative">
+    <section className="xl:justify-start xl:items-start xl:text-start outline-text justify-center text-center items-center w-full description h-150 flex flex-col gap-10 relative">
       {/* Greeting */}
       <m.p
         initial={{ opacity: 0, y: 40 }}
