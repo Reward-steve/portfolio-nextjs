@@ -5,10 +5,10 @@ import {
   SectionName,
   contact_form,
   how_to_reach_me,
-} from "../../api/data/data";
+} from "../../app/api/data/data";
 import { InputField } from "../input";
 
-const POST_URL = "api/sendEmail";
+const POST_URL = "/api/sendEmail";
 
 export interface FormData {
   Name: string;

@@ -1,4 +1,4 @@
-import { SectionName, projects } from "../../api/data/data";
+import { SectionName, projects } from "../../app/api/data/data";
 import Card from "../card";
 // import { useState } from "react";
 

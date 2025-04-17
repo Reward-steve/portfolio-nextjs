@@ -1,6 +1,6 @@
 "use client";
 import * as m from "motion/react-client";
-import { useLazyLoading } from "../hook/useLazyLoading";
+import { useLazyLoading } from "../app/hook/useLazyLoading";
 import { useState, useEffect } from "react";
 
 export default function PageHolder({
