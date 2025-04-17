@@ -2,7 +2,7 @@
 import * as m from "motion/react-client";
 import Button from "../buttons";
 import { useEffect, useState } from "react";
-import { how_to_reach_me } from "../../api/data/data";
+import { how_to_reach_me } from "../../app/api/data/data";
 import Link from "next/link";
 
 export default function Description() {

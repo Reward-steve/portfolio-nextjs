@@ -1,9 +1,9 @@
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin, FaTwitter, FaFacebook, FaEnvelope } from "react-icons/fa";
-import img1 from "../../image/country.png";
-import img2 from "../../image/food.png";
-import img3 from "../../image/ticket.png";
-import img4 from "../../image/personal.png";
+import img1 from "../../../public/image/country.png";
+import img2 from "../../../public/image/food.png";
+import img3 from "../../../public/image/ticket.png";
+import img4 from "../../..//public/image/personal.png";
 
 export function SectionName({ title }: { title: string }) {
   return <h1 className="text-4xl font-bold">{title}</h1>;

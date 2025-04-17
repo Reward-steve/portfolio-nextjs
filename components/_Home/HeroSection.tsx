@@ -1,4 +1,4 @@
-import logo from "@/app/image/developer-logo.png";
+import logo from "../../public/image/developer-logo.png";
 import Image from "next/image";
 import * as m from "motion/react-client";
 import { domAnimation, LazyMotion } from "motion/react";

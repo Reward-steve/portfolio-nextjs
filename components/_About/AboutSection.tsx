@@ -1,12 +1,12 @@
 import * as m from "motion/react-client";
 import Image from "next/image";
-import profile from "@/app/image/profile.jpg";
+import profile from "../../public/image/profile.jpg";
 import {
   SectionName,
   skills1,
   skills2,
   what_drives_me,
-} from "../../api/data/data";
+} from "../../app/api/data/data";
 import Link from "next/link";
 
 export default function AboutSection() {
