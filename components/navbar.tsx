@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
-// import "../app/about/page";
 
 const mapNavigation = [
   { path: "/about", linkName: "About" },
@@ -59,9 +58,9 @@ export default function Navigation() {
       return (
         <li className="nav-ul-li-375" key={index}>
           <Link
+            href={path}
             className="navlink-effect flex flex-col dark:text-[#c6e5ff] text-black"
             onClick={() => handleLinkClick(index)}
-            href={path}
           >
             {linkName}
             <span
@@ -76,7 +75,7 @@ export default function Navigation() {
   return (
     <nav
       className={`flex justify-between items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] py-10 px-10 top-0 z-50 ${
-        scrollY > 200 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
+        scrollY > 150 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
       } `}
     >
       <Link
@@ -93,7 +92,7 @@ export default function Navigation() {
       </Link>
 
       {/* Dropdown Toggle */}
-      <Link href={"/project"}>Test</Link>
+
       <div
         className="hidden dropdown-375"
         onClick={() => setDropdown(!dropdown)}
