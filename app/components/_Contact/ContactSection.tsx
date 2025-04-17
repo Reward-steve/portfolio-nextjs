@@ -65,12 +65,12 @@ export default function ContactSection() {
 
   return (
     <section className="w-full flex flex-col items-center gap-8 py-12">
-      <SectionName title="Contact me" />
+      <SectionName title="Get In Touch" />
 
       <div className="w-full flex flex-col md:flex-row gap-6">
         {/* Contact Form */}
         <aside className="md:w-1/2 p-6 shadow-lg rounded-xl border border-gray-700">
-          <h3 className="text-lg font-semibold mb-4">📫 Get In Touch</h3>
+          <h3 className="text-lg font-semibold mb-4">📫 Send a Message</h3>
           <form onSubmit={handleSendMail} className="space-y-4">
             {contact_form.map(({ form_name, place_holder }, id) => (
               <InputField
