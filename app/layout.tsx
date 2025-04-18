@@ -4,7 +4,6 @@ import { ThemeProvider } from "next-themes";
 import Navigation from "../components/navbar";
 import PageHolder from "../components/pageHolder";
 import "./style/globals.css";
-import "./style/mQuery.css";
 
 export const metadata = {
   title: "Reward Stephen | Frontend Developer",
