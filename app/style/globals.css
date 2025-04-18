@@ -8,7 +8,7 @@
   color: transparent;
 }
 .dark_bg {
-  @apply dark:bg-[#0f172b];
+  @apply dark:bg-[#091022];
 }
 .dark_tx_glow {
   @apply dark:text-cyan-400;
@@ -35,11 +35,8 @@ body {
 .navlink-effect {
   transition: color 0.5s linear;
 }
-.navlink-effect:hover {
-  color: rgb(0, 225, 255);
-}
 
-.navlink-effect span {
+.navlink-effect:hover span {
   background-color: rgb(0, 225, 255);
   width: 100%;
   transition: all 0.3s ease-in-out;

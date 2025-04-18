@@ -7,7 +7,7 @@ Welcome to my personal portfolio website, built using **Next.js**, **Framer Moti
 - ⚡ Fast and optimized with Next.js
 - 🎨 Beautiful UI powered by Tailwind CSS
 - 🎥 Smooth animations using Framer Motion
-- 🌗 Dark/Light mode support (coming soon)
+- 🌗 Dark/Light mode support
 - 📱 Fully responsive across all devices
 - 📁 Projects section with links
 - 📬 Contact form with API integration
@@ -21,12 +21,3 @@ Welcome to my personal portfolio website, built using **Next.js**, **Framer Moti
 - [Vercel](https://vercel.com/) for deployment
 
 ---
-
-## 🛠️ Getting Started
-
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/yourusername/your-portfolio.git
-cd your-portfolio
-```
