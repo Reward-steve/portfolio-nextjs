@@ -1,9 +1,10 @@
 "use client";
-import * as m from "motion/react-client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
+import { renderRotatingBorders } from "./renderRotate";
 
 const mapNavigation = [
   { path: "/about", linkName: "About" },
@@ -35,23 +36,6 @@ export default function Navigation() {
     setDropdown(false);
   };
 
-  const renderRotatingBorders = () => (
-    <>
-      <m.span
-        initial={{ rotate: 0 }}
-        animate={{ rotate: -360 }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="rounded-full border-[1px] px-5 w-17.5 h-14 absolute bottom-0 border-cyan-900 dark:border-cyan-500 text-cyan-40"
-      ></m.span>
-      <m.span
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-        className="rounded-full border-[1px] px-5 w-17.5 h-14 absolute bottom-0 border-cyan-900 dark:border-cyan-500 text-cyan-40"
-      ></m.span>
-    </>
-  );
-
   const renderNavLinks = () =>
     mapNavigation.map(({ path, linkName }, index) => {
       const active = index === isActive;
@@ -59,13 +43,14 @@ export default function Navigation() {
         <li className="nav-ul-li-375" key={index}>
           <Link
             href={path}
-            className="navlink-effect flex flex-col dark:text-[#c6e5ff] text-black"
+            className="navlink-effect flex flex-col dark_tx text-black"
             onClick={() => handleLinkClick(index)}
           >
             {linkName}
             <span
-              className="w-0 h-[1px] dark:bg-cyan-400 bg-cyan-800"
-              style={{ width: active ? "100%" : 0 }}
+              className={`w-${
+                active ? "[100%]" : "0"
+              } h-[2px] dark:bg-cyan-400 bg-cyan-800 transition duration-300`}
             ></span>
           </Link>
         </li>
@@ -74,8 +59,8 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`flex justify-between items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark:bg-[#0f172b] py-10 px-10 top-0 z-50 ${
-        scrollY > 150 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
+      className={`flex justify-between font-bold items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark_bg py-10 px-10 top-0 z-50 ${
+        scrollY > 100 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
       } `}
     >
       <Link
@@ -118,8 +103,8 @@ export default function Navigation() {
         }`}
       >
         {renderNavLinks()}
-        <ThemeToggle />
         <Button path="/Resume.pdf" text="Resume" />
+        <ThemeToggle />
       </ul>
     </nav>
   );

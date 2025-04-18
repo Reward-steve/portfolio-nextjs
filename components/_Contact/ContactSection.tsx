@@ -6,6 +6,7 @@ import {
   contact_form,
   how_to_reach_me,
 } from "../../app/api/data/data";
+import { FaPhone } from "react-icons/fa";
 import { InputField } from "../input";
 
 const POST_URL = "/api/sendEmail";
@@ -107,14 +108,18 @@ export default function ContactSection() {
             {how_to_reach_me.map(({ Icon, href, link_name }, id) => (
               <li
                 key={id}
-                className="flex items-center gap-2 text-cyan-600 hover:text-cyan-400 transition"
+                className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full"
               >
-                <Icon />
+                <Icon className="text-xl" />
                 <a href={href} target="_blank" rel="noopener noreferrer">
                   {link_name}
                 </a>
               </li>
             ))}
+            <li className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full cursor-pointer">
+              <FaPhone className="text-xl" />
+              +234 80 980 69 257
+            </li>
           </ul>
         </aside>
       </div>
