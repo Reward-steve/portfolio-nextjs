@@ -7,9 +7,9 @@ import Button from "./buttons";
 import { renderRotatingBorders } from "./renderRotate";
 
 const mapNavigation = [
-  { path: "/about", linkName: "About" },
-  { path: "/project", linkName: "Projects" },
-  { path: "/contact", linkName: "Get in touch" },
+  { path: "/about_temp", linkName: "About" },
+  { path: "/project_temp", linkName: "Projects" },
+  { path: "/contact_temp", linkName: "Get in touch" },
 ];
 
 export default function Navigation() {
