@@ -17,7 +17,7 @@ export default function Card({
   repo?: string;
 }) {
   return (
-    <section className=" w-full mx-auto flex flex-col lg:flex-row items-center bg-gray-900/50 border border-gray-700 rounded-xl p-6 shadow-lg hover:border-gray-600 transition-transform duration-300 easeInOut cursor-pointer">
+    <section className="w-full mx-auto flex flex-col lg:flex-row items-center bg-gray-300 dark_bg border border-gray-700 rounded-xl sm:p-6 px-2 py-6 shadow-lg hover:border-gray-600 transition-transform duration-300 easeInOut cursor-pointer">
       {/* Image Section */}
       <div className="w-full lg:w-1/2 flex justify-center sm:h-auto h-[300]">
         <Image
@@ -51,8 +51,8 @@ export default function Card({
         {/* Live Demo & Repo Links */}
         {(demo || repo) && (
           <div className="flex gap-4 mt-3">
-            {demo && <Button path={demo} text="🔗 Live Demo" />}
-            {repo && <Button path={repo} text="💻 View Code" />}
+            {demo && <Button path={demo} text="🔗 Demo" />}
+            {repo && <Button path={repo} text="💻 Code" />}
           </div>
         )}
       </article>
