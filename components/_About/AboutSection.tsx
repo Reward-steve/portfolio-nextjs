@@ -84,7 +84,7 @@ export default function AboutSection() {
           </m.div>
         </article>
         {/* Profile Image with Hover Effect */}
-        <m.div className="w-[500] h-[500] flex justify-center items-center rounded-xl overflow-hidden sm:mt-0.5">
+        <m.div className="w-[500px] h-[500px] flex justify-center items-center rounded-xl overflow-hidden sm:mt-0.5">
           <Image
             src={profile}
             alt="profile"
