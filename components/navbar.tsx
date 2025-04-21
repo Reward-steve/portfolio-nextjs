@@ -5,6 +5,7 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
 import { renderRotatingBorders } from "./renderRotate";
+import * as m from "motion/react-client";
 
 const mapNavigation = [
   { path: "/about_temp", linkName: "About" },
@@ -40,20 +41,24 @@ export default function Navigation() {
     mapNavigation.map(({ path, linkName }, index) => {
       const active = index === isActive;
       return (
-        <li className="nav-ul-li-375" key={index}>
+        <m.li
+          whileHover={{ scale: 1.05 }}
+          className="nav-ul-li-375"
+          key={index}
+        >
           <Link
             href={path}
-            className="navlink-effect flex flex-col dark_tx text-black"
+            className="flex flex-col dark_tx text-black"
             onClick={() => handleLinkClick(index)}
           >
             {linkName}
-            <span
-              className={`w-${
-                active ? "[100%]" : "0"
-              } h-[2px] dark:bg-cyan-400 bg-cyan-800 transition duration-300`}
-            ></span>
+            <m.span
+              className={`h-[2px] dark:bg-cyan-400 bg-cyan-800 transition duration-300 `}
+              animate={{ width: active ? "100%" : "0%" }}
+              initial={{ width: "0%" }}
+            ></m.span>
           </Link>
-        </li>
+        </m.li>
       );
     });
 

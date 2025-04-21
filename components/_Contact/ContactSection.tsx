@@ -6,7 +6,10 @@ import {
   contact_form,
   how_to_reach_me,
 } from "../../app/api/data/data";
-import { FaPhone } from "react-icons/fa";
+
+import { FaWhatsapp } from "react-icons/fa";
+
+// import whatsapp;
 import { InputField } from "../input";
 
 const POST_URL = "/api/sendEmail";
@@ -117,7 +120,7 @@ export default function ContactSection() {
               </li>
             ))}
             <li className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full cursor-pointer">
-              <FaPhone className="text-xl" />
+              <FaWhatsapp className="text-xl" />
               +234 80 980 69 257
             </li>
           </ul>
