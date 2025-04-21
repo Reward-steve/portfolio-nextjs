@@ -28,7 +28,6 @@ export default function AboutSection() {
             different countries, including their flags, population, and economic
             data. I am excited to bring my skills to your team.
           </m.p>
-
           {/* What Drives Me Section */}
           <m.div
             initial={{ opacity: 0, x: -50 }}
@@ -45,7 +44,6 @@ export default function AboutSection() {
               ))}
             </ul>
           </m.div>
-
           {/* Skills Section */}
           <m.div
             initial={{ opacity: 0, x: -50 }}

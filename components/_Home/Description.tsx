@@ -54,14 +54,14 @@ export default function Description() {
       </m.p>
 
       {/* Button */}
-      <Button path="/project" text="Check out my projects" />
+      <Button path="/project_temp" text="Check out my projects" />
 
       {/* Social Links */}
       <m.div
         initial={{ x: -200 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="rounded-full flex-wrap sm:my-10 flex justify-between items-center sm:gap-5  my-0  gap-3"
+        className="rounded-full flex-wrap sm:my-10 flex justify-between items-center sm:gap-5  my-0 gap-3"
       >
         {how_to_reach_me.map(({ Icon, href, link_name }, i) => (
           <Link

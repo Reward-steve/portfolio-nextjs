@@ -121,7 +121,14 @@ export default function ContactSection() {
             ))}
             <li className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full cursor-pointer">
               <FaWhatsapp className="text-xl" />
-              +234 80 980 69 257
+
+              <a
+                href={"https://wa.link/ty8rwm"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +234 80 980 69 257
+              </a>
             </li>
           </ul>
         </aside>
