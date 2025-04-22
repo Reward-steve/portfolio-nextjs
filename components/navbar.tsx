@@ -65,7 +65,7 @@ export default function Navigation() {
   return (
     <nav
       className={`flex justify-between font-bold items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark_bg py-10 px-10 top-0 z-50 ${
-        scrollY > 200 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
+        scrollY > 300 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
       } `}
     >
       <Link
