@@ -108,7 +108,7 @@ export default function Navigation() {
         }`}
       >
         {renderNavLinks()}
-        <Button path="/Resume.pdf" text="Resume" />
+        <Button path="/cv.pdf" text="Resume" />
         <ThemeToggle />
       </ul>
     </nav>
