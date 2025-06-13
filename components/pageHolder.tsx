@@ -3,7 +3,7 @@ import * as m from "motion/react-client";
 import { useLazyLoading } from "../app/hook/useLazyLoading";
 import { useState, useEffect } from "react";
 import { renderRotatingBorders } from "./renderRotate";
-
+import { FaSpinner } from "react-icons/fa";
 export default function PageHolder({
   children,
 }: {
@@ -19,8 +19,8 @@ export default function PageHolder({
 
   return !hydrated || isLoading ? (
     <div className="w-full flex h-[80vh] justify-center items-center bg-linear-90 dark_bg">
-      <p className="animate-bounce w-10 h-10 text-md rounded-full border-1 p-3 flex justify-center relative items-center flex-col border-cyan-400 text-cyan-800 dark:text-cyan-400 top-0 left-0 font-bold text-2xl drop-shadow-2x transition-all duration-300">
-        Loading...
+      <p className="animate-spin w-10 h-10 text-md rounded-full border-1 p-3 flex justify-center relative items-center flex-col border-cyan-400 text-cyan-800 dark:text-cyan-400 top-0 left-0 font-bold text-2xl drop-shadow-2x transition-all duration-300">
+        <FaSpinner size={50} />
       </p>
     </div>
   ) : (
