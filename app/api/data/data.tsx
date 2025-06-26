@@ -4,6 +4,7 @@ import img1 from "../../../public/image/country.png";
 import img2 from "../../../public/image/food.png";
 import img3 from "../../../public/image/ticket.png";
 import img4 from "../../..//public/image/personal.png";
+import img5 from "../../..//public/image/ut.png";
 
 export function SectionName({ title }: { title: string }) {
   return <h1 className="text-4xl font-bold">{title}</h1>;
@@ -15,7 +16,7 @@ export const skills1 = [
   { skill: "JavaScript ", color: "text-yellow-400" },
   { skill: "Git ", color: "text-gray-500" },
   { skill: "GitHub ", color: "text-gray-500" },
-  { skill: "VS Code ", color: "text-blue-500" },
+  { skill: "Code Editor: VS Code", color: "text-blue-500" },
 ];
 export const skills2 = [
   { skill: "React.js ", color: "text-blue-400" },
@@ -27,25 +28,40 @@ export const skills2 = [
 ];
 
 export const what_drives_me = [
-  "The satisfaction of bringing ideas to life through code.",
-  "A passion for learning new technologies and staying ahead of industry trends.",
-  "Collaborating and sharing knowledge to create better products.",
-  "Harnessing technology to solve real-world problems and make a positive impact.",
-  "The thrill of tackling complex challenges and finding innovative solutions.",
+  "Designing systems that are intuitive, fast, and accessible.",
+  "Staying current with tools and practices that improve developer efficiency.",
+  "Writing code that balances performance, maintainability, and visual quality.",
+  "Building projects that reflect real-world use and solve practical problems.",
+  "Delivering UI/UX that helps users get things done without friction.",
 ];
 
 export const projects = [
   {
+    title: "Urban Tailor",
+    image: img5,
+    cardInfo:
+      "A tailored business website for fashion boutiques and tailors, featuring a responsive layout, service showcase, and client engagement tools.",
+
+    features: [
+      "Modern landing page layout with mobile-first design",
+      "Dedicated services and gallery sections for brand presentation",
+      "Integrated contact form and WhatsApp support",
+      "Dark mode toggle for accessible UX",
+    ],
+    demo: "https://urban-tailor.vercel.app/",
+    repo: "https://github.com/Reward-steve/urban-tailor",
+  },
+  {
     title: "TastyHub Website",
     image: img2,
     cardInfo:
-      "An interactive and visually appealing website for food lovers to discover and explore delicious recipes.",
+      "A responsive recipe discovery platform with structured content, clean UI, and smooth animations for seamless user exploration.",
 
     features: [
-      "Browse a collection of mouth-watering recipes",
-      "User-friendly interface with an elegant design",
-      "Fully responsive for both mobile and desktop users",
-      "Smooth animations for a modern experience",
+      "Interactive recipe browsing experience",
+      "Elegant and intuitive user interface",
+      "Responsive layout optimized for mobile and desktop",
+      "Subtle animations for modern visual feedback",
     ],
     demo: "https://tasty-hub-phi.vercel.app/",
     repo: "https://github.com/Reward-steve/Tasty-hub",
@@ -54,12 +70,13 @@ export const projects = [
     title: "My Country App",
     image: img1,
     cardInfo:
-      "A web app that provides detailed information about different countries, including their flags, population, and economic data.",
+      "A data-driven React app offering detailed country profiles using REST APIs. Includes dark mode and optimized data fetching logic.",
+
     features: [
-      "Search for any country by name",
-      "View country details, including flag, capital, population, and GDP",
-      "Dark mode support",
-      "Fully responsive design for all devices",
+      "Live search for countries by name",
+      "Dynamic country details: flag, capital, population, and GDP",
+      "Responsive UI with light/dark theme toggle",
+      "Graceful handling of missing or incomplete API data",
     ],
     demo: "https://my-country-app-three.vercel.app/",
     repo: "https://github.com/Reward-steve/My-Country-App",
@@ -68,11 +85,13 @@ export const projects = [
     title: "Personal Portfolio",
     image: img4,
     cardInfo:
-      "A personal portfolio showcasing my projects and skills, built with Next.js and Tailwind CSS.",
+      "My personal portfolio showcasing featured projects, tech stack, and contact methods. Built using Next.js and Tailwind CSS.",
+
     features: [
-      "Next.js & Tailwind CSS",
-      "Smooth animations",
-      "Fully responsive",
+      "Clean section-based layout with smooth navigation",
+      "Responsive design with interactive project cards",
+      "Tailwind CSS and Next.js integration",
+      "Dark mode and animated transitions",
     ],
     demo: "https://my-portfolio-sage-zeta-84.vercel.app/",
     repo: "https://github.com/Reward-steve/my-portfolio",
@@ -81,13 +100,14 @@ export const projects = [
     title: "Conference Ticket Generator",
     image: img3,
     cardInfo:
-      "A dynamic web application that generates unique conference tickets for attendees.",
+      "An advanced form-driven React app that generates custom digital tickets with unique user data and QR validation logic.",
+
     features: [
-      "Generates unique, scannable QR-coded tickets",
-      "Users can enter their details and receive an instant digital ticket",
-      "Admin panel for managing ticket registrations",
-      "Secure and tamper-proof ticket validation",
-      "Modern UI with a seamless user experience",
+      "Form validation with real-time feedback (email, required fields)",
+      "File upload with instant preview and inline error handling",
+      "Live-rendered digital ticket including name, ticket ID, and QR code",
+      "Admin panel with data management tools (demo-ready)",
+      "Designed with accessibility and user flow in mind",
     ],
     demo: "https://conference-ticket-generator-gamma.vercel.app/",
     repo: "https://github.com/Reward-steve/conference-ticket-generator-main",

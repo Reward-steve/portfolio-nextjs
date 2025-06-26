@@ -21,11 +21,11 @@ export const metadata = {
     title: "Reward Stephen | Frontend Developer",
     description:
       "Explore Reward Stephen's portfolio, showcasing projects and skills as a frontend developer.",
-    url: "https://yourwebsite.com", // Update URL to your actual website
+    url: "https://my-portfolio-website-chi-kohl.vercel.app/",
     type: "website",
     images: [
       {
-        url: "https://yourwebsite.com/og-image.jpg", // Update with actual image URL
+        url: "../app/asset/website.png",
         width: 1200,
         height: 630,
         alt: "Reward Stephen Portfolio",
@@ -34,11 +34,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@your_twitter_handle", // Update Twitter handle
+    site: "@your_twitter_handle",
     title: "Reward Stephen | Frontend Developer",
     description:
       "Explore Reward Stephen's portfolio, showcasing projects and skills as a frontend developer.",
-    images: ["https://yourwebsite.com/og-image.jpg"], // Update with actual image URL
+    images: ["../app/asset/website.png"],
   },
 };
 

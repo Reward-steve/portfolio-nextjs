@@ -1,6 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
-import { TbBulbFilled, TbBulbOff } from "react-icons/tb";
+import { PiSunDimLight, PiMoonStarsThin } from "react-icons/pi";
+
 import * as m from "motion/react-client";
 
 export default function ThemeToggle() {
@@ -12,17 +13,21 @@ export default function ThemeToggle() {
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 300 }}
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="px-4 py-2 rounded-full outline-none border-none"
+      className="rounded-full outline-none border-none"
       title="Toggle theme"
     >
       {resolvedTheme === "dark" ? (
-        <TbBulbFilled
+        <PiSunDimLight
           color="orange"
           size={25}
           style={{ fill: "currentColor" }}
         />
       ) : (
-        <TbBulbOff size={25} color="black" style={{ fill: "currentColor" }} />
+        <PiMoonStarsThin
+          size={25}
+          color="black"
+          style={{ fill: "currentColor" }}
+        />
       )}
 
       <span className="sr-only">Toggle theme</span>

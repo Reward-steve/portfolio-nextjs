@@ -64,7 +64,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`flex justify-between font-bold items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark_bg py-10 px-10 top-0 z-50 ${
+      className={`flex justify-between font-bold items-center w-full h-16 bg-white text-[#0f172b] dark:text-[#c6e5ff] dark_bg py-10 sm:px-10 px-2 top-0 z-50 ${
         scrollY > 300 ? "fixed backdrop-blur-md bg-transparent shadow-md" : ""
       } `}
     >
@@ -81,36 +81,37 @@ export default function Navigation() {
         {isActive === null && renderRotatingBorders()}
       </Link>
 
-      {/* Dropdown Toggle */}
-
-      <div
-        className="hidden dropdown-375"
-        onClick={() => setDropdown(!dropdown)}
-      >
-        {[
-          "rotate-[-45deg] translate-y-2 translate-x-0.2",
-          "translate-x-1/2 opacity-0",
-          "rotate-45 translate-y-[-7px] translate-x-0",
-        ].map((transform, index) => (
-          <div
-            key={index}
-            className={`line bg-cyan-800 dark:bg-cyan-400 transition: duration-300 ease-linear ${
-              dropdown ? transform : ""
-            }`}
-          ></div>
-        ))}
-      </div>
-
       {/* Navigation Links */}
       <ul
-        className={`nav-ul-375 flex h-full justify-between items-center sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out dark:bg-[#0f172b] bg-white ${
+        className={`nav-ul-375 flex h-full justify-evenly items-center sm:opacity-100 sm:w-[85%] lg:w-1/2 md:w-[60%] inset-x-0 transition: duration-300 ease-in-out dark:bg-[#0f172b] bg-white ${
           dropdown ? "flex" : "drop"
         }`}
       >
         {renderNavLinks()}
         <Button path="/cv.pdf" text="Resume" />
-        <ThemeToggle />
       </ul>
+      <div className="flex justify-center items-center">
+        <ThemeToggle />
+        {/* Dropdown Toggle */}
+
+        <div
+          className="hidden dropdown-375"
+          onClick={() => setDropdown(!dropdown)}
+        >
+          {[
+            "rotate-[-45deg] translate-y-2 translate-x-0.2",
+            "translate-x-1/2 opacity-0",
+            "rotate-45 translate-y-[-7px] translate-x-0",
+          ].map((transform, index) => (
+            <div
+              key={index}
+              className={`line bg-cyan-800 dark:bg-cyan-400 transition: duration-300 ease-linear ${
+                dropdown ? transform : ""
+              }`}
+            ></div>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }
