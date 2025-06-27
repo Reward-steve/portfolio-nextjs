@@ -8,12 +8,12 @@ export default function HeroSection() {
   return (
     <section
       aria-label="Hero section"
-      className="w-full flex flex-col md:flex-row items-center justify-between gap-10 py-10"
+      className="w-full flex mt-8 flex-col md:flex-row items-center justify-between gap-10 py-10"
     >
       <LazyMotion features={domAnimation}>
         {/* Text Section */}
         <m.div
-          className="md:w-1/2 w-full flex justify-center items-start flex-col px-4"
+          className="md:w-1/2 w-full flex justify-center mt-4 sm:mt-0 items-start flex-col px-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
