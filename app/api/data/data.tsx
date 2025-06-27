@@ -93,7 +93,7 @@ export const projects = [
       "Tailwind CSS and Next.js integration",
       "Dark mode and animated transitions",
     ],
-    demo: "https://my-portfolio-sage-zeta-84.vercel.app/",
+    demo: "https://my-portfolio-website-chi-kohl.vercel.app/",
     repo: "https://github.com/Reward-steve/my-portfolio",
   },
   {
