@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Button from "./buttons";
-import { renderRotatingBorders } from "./renderRotate";
 import * as m from "motion/react-client";
 
 const mapNavigation = [
@@ -74,7 +73,6 @@ export default function Navigation() {
         }}
       >
         RS
-        {isActive === null && renderRotatingBorders()}
       </Link>
 
       {/* Navigation Links */}
