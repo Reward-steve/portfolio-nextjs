@@ -2,7 +2,6 @@
 import * as m from "motion/react-client";
 import { useLazyLoading } from "../app/hook/useLazyLoading";
 import { useState, useEffect } from "react";
-import { renderRotatingBorders } from "./renderRotate";
 import { FaSpinner } from "react-icons/fa";
 export default function PageHolder({
   children,
