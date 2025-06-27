@@ -1,15 +1,12 @@
 import { SectionName, projects } from "../../app/api/data/data";
 import Card from "../card";
-// import { useState } from "react";
 
 export default function ProjectSection() {
   return (
-    <section className="w-full">
-      {/* Section Title */}
+    <section className="w-full py-16">
       <SectionName title="Projects I've Built" />
 
-      {/* Project Cards */}
-      <div className="flex flex-col gap-10 mt-8">
+      <div className="flex flex-col gap-12 mt-10">
         {projects.map(
           ({ title, image, cardInfo, features, demo, repo }, index) => (
             <Card
@@ -17,9 +14,9 @@ export default function ProjectSection() {
               title={title}
               image={image as unknown as string}
               cardInfo={cardInfo}
-              features={features || []}
-              demo={demo || ""}
-              repo={repo || ""}
+              features={features}
+              demo={demo}
+              repo={repo}
             />
           )
         )}

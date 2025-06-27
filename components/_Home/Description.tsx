@@ -1,4 +1,5 @@
 "use client";
+
 import * as m from "motion/react-client";
 import Button from "../buttons";
 import { useEffect, useState } from "react";
@@ -7,11 +8,10 @@ import Link from "next/link";
 
 export default function Description() {
   const text =
-    "A Front-End Developer passionate about building responsive modern web applications.";
+    "I specialize in crafting responsive, high-performance websites using React, TypeScript, and modern UI libraries.";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
-  // Typing effect logic
   useEffect(() => {
     if (index < text.length) {
       const interval = setInterval(() => {
@@ -23,54 +23,44 @@ export default function Description() {
   }, [index, text]);
 
   return (
-    <section className="xl:justify-start xl:items-start xl:text-start outline-text justify-center text-center items-center w-full description h-150 flex flex-col gap-10 relative">
-      {/* Greeting */}
-      <m.p
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-2xl"
-      >
-        Hello 👋, I'm
-      </m.p>
-
-      {/* Name */}
+    <section className="w-full max-w-2xl flex flex-col gap-8 text-center xl:text-left">
+      {/* Title */}
       <m.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-        className="sm:text-6xl text-5xl font-bold text-cyan-800 dark_tx_glow w-full"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-5xl sm:text-6xl font-bold text-cyan-800 dark_tx_glow"
       >
-        Reward Stephen.
+        Reward Stephen
       </m.h1>
 
-      {/* Typing Effect */}
+      {/* Typing Intro */}
       <m.p
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-2 sm:w-3/4 w-full"
+        className="text-lg leading-relaxed sm:w-3/4 mx-auto xl:mx-0"
       >
         {displayedText}
         {index < text.length && <span className="animate-bounce">|</span>}
       </m.p>
 
-      {/* Button */}
+      {/* CTA Button */}
       <Button path="/project_temp" text="Check out my projects" />
 
-      {/* Social Links */}
+      {/* Social Icons */}
       <m.div
-        initial={{ x: -200 }}
-        whileInView={{ x: 0 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-        className="rounded-full flex-wrap sm:my-10 flex justify-between items-center sm:gap-5  my-0 gap-3"
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-wrap gap-4 justify-center xl:justify-start"
       >
         {how_to_reach_me.map(({ Icon, href, link_name }, i) => (
           <Link
             href={href}
             key={i}
             title={link_name}
-            className="border-2 hover:rotate-[360deg] border-dotted border-cyan-500 dark:hover:text-cyan-400 hover_dark_border hover:text-cyan-900 w-12 h-12 text-cyan-700 rounded-full flex cursor-pointer items-center justify-center hover:shadow-cyan-400 transition duration-300"
+            className="w-10 h-10 flex items-center justify-center text-cyan-700 hover:text-cyan-900 dark:hover:text-cyan-400 border-2 border-dotted border-cyan-500 rounded-full hover:rotate-[360deg] transition-transform duration-500"
           >
-            <Icon size={20} />
+            <Icon size={18} />
           </Link>
         ))}
       </m.div>

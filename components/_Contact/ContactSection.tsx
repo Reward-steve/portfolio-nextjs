@@ -6,10 +6,7 @@ import {
   contact_form,
   how_to_reach_me,
 } from "../../app/api/data/data";
-
 import { FaWhatsapp } from "react-icons/fa";
-
-// import whatsapp;
 import { InputField } from "../input";
 
 const POST_URL = "/api/sendEmail";
@@ -26,6 +23,7 @@ export default function ContactSection() {
     Email: "",
     Message: "",
   });
+
   const [isSending, setIsSending] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -68,13 +66,17 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center gap-8 py-12">
-      <SectionName title="Get In Touch" />
+    <section className="w-full flex flex-col items-center gap-10 py-16">
+      <SectionName title="Let's Work Together" />
+      <p className="text-lg max-w-2xl text-center text-gray-300">
+        Have a project in mind or need a developer for your team? Let’s connect.
+        I respond within 24 hours.
+      </p>
 
       <div className="w-full flex flex-col md:flex-row gap-6">
         {/* Contact Form */}
         <aside className="md:w-1/2 p-6 shadow-lg rounded-xl border border-gray-700">
-          <h3 className="text-lg font-semibold mb-4">📫 Send a Message</h3>
+          <h3 className="text-xl font-semibold mb-4">Contact Me Directly</h3>
           <form onSubmit={handleSendMail} className="space-y-4">
             {contact_form.map(({ form_name, place_holder }, id) => (
               <InputField
@@ -90,7 +92,7 @@ export default function ContactSection() {
             <button
               type="submit"
               disabled={isSending}
-              className="w-full bg-cyan-700 cursor-pointer text-white py-2 rounded-lg hover:bg-cyan-600 transition disabled:opacity-50 "
+              className="w-full bg-cyan-700 cursor-pointer text-white py-2 rounded-lg hover:bg-cyan-600 transition disabled:opacity-50"
             >
               {isSending ? "Sending..." : "Send Message"}
             </button>
@@ -106,28 +108,29 @@ export default function ContactSection() {
 
         {/* Contact Info */}
         <aside className="md:w-1/2 p-6 shadow-lg rounded-xl border border-gray-700">
-          <h3 className="text-lg font-semibold mb-4">📫 How to Reach Me</h3>
+          <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
           <ul className="space-y-5">
             {how_to_reach_me.map(({ Icon, href, link_name }, id) => (
               <li
                 key={id}
                 className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full"
               >
-                <Icon className="text-xl" />
+                <Icon className="text-xl" aria-hidden="true" />
                 <a href={href} target="_blank" rel="noopener noreferrer">
                   {link_name}
                 </a>
               </li>
             ))}
-            <li className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full cursor-pointer">
-              <FaWhatsapp className="text-xl" />
 
+            <li className="flex items-center gap-5 text-cyan-600 hover:text-cyan-900 dark:hover:text-cyan-400 transition w-full">
+              <FaWhatsapp className="text-xl" aria-hidden="true" />
               <a
-                href={"https://wa.link/ty8rwm"}
+                href="https://wa.me/2348098069257?text=Hi%20Reward%2C%20I%27m%20interested%20in%20a%20website%20project"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Chat with Reward on WhatsApp"
               >
-                +234 80 980 69 257
+                Message me on WhatsApp
               </a>
             </li>
           </ul>
