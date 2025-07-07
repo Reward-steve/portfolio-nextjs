@@ -15,7 +15,7 @@
       top: 80px;
       height: 12em;
       border-radius: 0 0 0 10px;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: baseline;
       padding-left: 1em;
     }
