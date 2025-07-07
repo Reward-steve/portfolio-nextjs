@@ -5,20 +5,22 @@
 
 @layer utilities {
   @media (max-width: 639px) {
-    .nav-ul-375 {
-      flex-direction: column;
-      z-index: 23;
-      color: white;
-      border-right: none;
-      border: 1px solid rgba(128, 128, 128, 0.415);
-      position: absolute;
-      top: 80px;
-      height: 12em;
-      border-radius: 0 0 0 10px;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-left: 1em;
-    }
+.nav-ul-375 {
+  flex-direction: column;
+  z-index: 23;
+  color: white;
+  border-right: none;
+  border: 1px solid rgba(128, 128, 128, 0.415);
+  position: absolute;
+  top: 80px;
+  height: 12em;
+  border-radius: 0 0 0 10px;
+  justify-content: flex-start;   
+  align-items: flex-start;       
+  padding: 1em;                  
+  gap: 0.7em;                    
+}
+    
 
     .dropdown-375 {
       width: 50px;
