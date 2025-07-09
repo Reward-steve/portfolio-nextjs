@@ -68,7 +68,7 @@ export default function ContactSection() {
   return (
     <section className="w-full flex flex-col items-center gap-10 py-16">
       <SectionName title="Let's Work Together" />
-      <p className="text-lg max-w-2xl text-center text-gray-300">
+      <p className="text-lg max-w-2xl text-center dark:text-gray-300">
         Have a project in mind or need a developer for your team? Let’s connect.
         I respond within 24 hours.
       </p>
@@ -92,7 +92,7 @@ export default function ContactSection() {
             <button
               type="submit"
               disabled={isSending}
-              className="w-full bg-cyan-700 cursor-pointer text-white py-2 rounded-lg hover:bg-cyan-600 transition disabled:opacity-50"
+              className="w-full bg-cyan-700 cursor-pointer text-white px-2 h-[54px] rounded-xl hover:bg-cyan-600 transition disabled:opacity-50"
             >
               {isSending ? "Sending..." : "Send Message"}
             </button>

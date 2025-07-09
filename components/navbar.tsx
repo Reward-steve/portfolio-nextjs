@@ -57,7 +57,7 @@ export default function Navigation() {
   return (
     <nav
       role="navigation"
-      className={`fixed top-0 z-50 w-full h-16 flex justify-between items-center px-4 sm:px-10 py-10 font-bold backdrop-blur-md ${
+      className={`fixed top-0 z-50 w-full h-16 flex justify-between shadow-sm items-center px-4 sm:px-10 py-10 font-bold backdrop-blur-md ${
         scrollY > 100
           ? "shadow-md bg-white/80 dark:bg-[#0f172b]/80"
           : "bg-white dark:bg-[#0f172b]"
@@ -99,17 +99,17 @@ export default function Navigation() {
         >
           <span
             className={`block h-0.5 w-full bg-cyan-800 dark:bg-cyan-400 transition-transform duration-300 ${
-              dropdown ? "rotate-45 translate-y-1.5" : ""
+              dropdown ? "rotate-45 translate-y-2.5 translate-x-0" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-full bg-cyan-800 dark:bg-cyan-400 transition-all duration-300 ${
-              dropdown ? "opacity-0" : ""
+            className={`block h-0.5 w-full bg-cyan-800 dark:bg-cyan-400 transition-all duration-500 ${
+              dropdown ? "translate-x-4 opacity-0" : ""
             }`}
           />
           <span
             className={`block h-0.5 w-full bg-cyan-800 dark:bg-cyan-400 transition-transform duration-300 ${
-              dropdown ? "-rotate-45 -translate-y-1.5" : ""
+              dropdown ? "-rotate-45 -translate-y-2 -translate-x-0" : ""
             }`}
           />
         </div>

@@ -13,9 +13,7 @@
       border: 1px solid rgba(128, 128, 128, 0.415);
       position: absolute;
       top: 80px;
-      height: 12em;
       border-radius: 0 0 0 10px;
-      justify-content: space-evenly;
       align-items: baseline;
       padding-left: 1em;
     }

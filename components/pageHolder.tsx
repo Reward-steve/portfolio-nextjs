@@ -24,7 +24,7 @@ export default function PageHolder({
     </div>
   ) : (
     <m.div
-      className="w-full flex flex-col gap-10 sm:p-10 p-5 bg-white text-[#0f172b] dark_tx dark_bg rounded-xl"
+      className="w-full flex flex-col gap-10 mt-6 sm:p-10 p-5 bg-white text-[#0f172b] dark_tx dark_bg rounded-xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

@@ -23,7 +23,7 @@ export const InputField = ({
         value={value}
         onChange={onChange}
         placeholder="Your message here..."
-        className="w-full mt-1 p-2 border rounded-lg focus:ring-cyan-400 border-gray-700 bg-transparent"
+        className="w-full mt-1 px-2 h-[54px] border rounded-xl focus:ring-cyan-400 border-gray-700 bg-transparent"
       ></textarea>
     ) : (
       <input
@@ -32,7 +32,7 @@ export const InputField = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full mt-1 p-2 border rounded-lg focus:ring-cyan-400 border-gray-700 bg-transparent"
+        className="w-full mt-1 px-2 h-[54px] border rounded-xl focus:ring-cyan-400 border-gray-700 bg-transparent"
       />
     )}
   </>
