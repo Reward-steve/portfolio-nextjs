@@ -1,6 +1,6 @@
 import * as m from "motion/react-client";
 import Image from "next/image";
-import profile from "../../public/image/profile.jpg";
+import profile from "../../public/image/file_0000000036cc620a9c9281f08ce156e2.png";
 import {
   SectionName,
   skills1,
