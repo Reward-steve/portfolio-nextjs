@@ -5,6 +5,10 @@ import img2 from "../../../public/image/food.png";
 import img3 from "../../../public/image/ticket.png";
 import img4 from "../../..//public/image/personal.png";
 import img5 from "../../..//public/image/ut.png";
+import service1 from "../../../public/image/business.jpg";
+import service2 from "../../../public/image/landing.jpg";
+import service3 from "../../../public/image/dev.jpg";
+import service4 from "../../../public/image/portfolio.jpg";
 
 export function SectionName({ title }: { title: string }) {
   return <h1 className="text-4xl font-bold">{title}</h1>;
@@ -33,6 +37,69 @@ export const what_drives_me = [
   "Writing code that balances performance, maintainability, and visual quality.",
   "Building projects that reflect real-world use and solve practical problems.",
   "Delivering UI/UX that helps users get things done without friction.",
+];
+
+export const servicesIntro = `
+I offer frontend development services focused on building clean, fast,
+and responsive websites. Whether you're a small business, startup, or
+personal brand, I help turn your ideas into user-focused digital
+experiences that load fast, look great, and work seamlessly across all
+devices.
+`;
+
+export const services = [
+  {
+    id: "business",
+    title: "Business Websites",
+    image: service1,
+    description:
+      "I design and build multi-page websites that reflect your brand and convert visitors into clients. Ideal for personal brands and small businesses.",
+    features: [
+      "Home, About, Services, Contact pages",
+      "Contact forms or WhatsApp integrations",
+      "Mobile-first and SEO-ready",
+      "Fast, clean, professional design",
+    ],
+    delay: 0.3,
+  },
+  {
+    id: "landing",
+    title: "Landing Pages",
+    image: service2,
+    description:
+      "One-page websites built to capture attention and drive action — ideal for launches, signups, and promotions.",
+    features: [
+      "Scroll-based storytelling or CTA-focused layouts",
+      "Custom animations and visuals",
+      "Lightning-fast and mobile-friendly",
+    ],
+    delay: 0.4,
+  },
+  {
+    id: "frontend",
+    title: "Frontend Development",
+    image: service3,
+    description:
+      "Already have a design or backend team? I can code a modern UI from scratch — fast and pixel-perfect — using React, TypeScript, and Tailwind CSS.",
+    features: [
+      "Reusable components",
+      "API-ready and scalable structure",
+      "Great for SaaS, dashboards, or MVPs",
+    ],
+    delay: 0.5,
+  },
+  {
+    id: "portfolio",
+    title: "Personal Portfolio Sites",
+    image: service4,
+    description:
+      "Custom portfolio or personal brand sites that tell your story and showcase your work — designed to impress.",
+    features: [
+      "Projects, bio, contact, and testimonials",
+      "Fully responsive and performance-optimized",
+    ],
+    delay: 0.6,
+  },
 ];
 
 export const projects = [

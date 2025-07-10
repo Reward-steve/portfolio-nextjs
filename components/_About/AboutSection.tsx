@@ -1,6 +1,6 @@
 import * as m from "motion/react-client";
 import Image from "next/image";
-import profile from "../../public/image/file_0000000036cc620a9c9281f08ce156e2.png";
+import profile from "../../public/image/profile.png";
 import {
   SectionName,
   skills1,
@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <>
+    <div className="mt-14">
       <SectionName title="About Me" />
 
       <div className="w-full flex flex-wrap justify-between items-center sm:justify-around gap-10">
@@ -112,6 +112,6 @@ export default function AboutSection() {
           , which helps me work quickly and efficiently.
         </p>
       </m.footer>
-    </>
+    </div>
   );
 }
