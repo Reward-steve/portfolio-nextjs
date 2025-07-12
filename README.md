@@ -42,14 +42,14 @@ A modern and responsive personal portfolio website built to showcase my projects
 
 ## 📁 Folder Structure (Simplified)
 
+```bash
 src/
 │
-├── components/ # Reusable UI components
-├── app/ # Route-based pages (App Router)
-├── public/ # Images and static assets
-├── styles/ # Global and tailwind configs
-└── tsconfig.json # TypeScript configuration
-
+├── components/       # Reusable UI components
+├── app/              # Route-based pages (App Router)
+├── public/           # Images and static assets
+├── styles/           # Global and tailwind configs
+└── tsconfig.json     # TypeScript configuration
 
 ---
 
@@ -63,14 +63,3 @@ Your personal portfolio is often your **first impression**. This site shows:
 
 It’s not just a portfolio — it’s proof I can **design, code, and deliver**.
 
----
-
-## 📬 Contact Me
-
-- **Email**: rewardstephen30@gmail.com  
-- **LinkedIn**: [linkedin.com/in/reward-stephen-166021310](https://linkedin.com/in/reward-stephen-166021310)  
-- **GitHub**: [github.com/Reward-steve](https://github.com/Reward-steve)
-
----
-
-## ⭐ If you find this helpful or inspiring, consider starring the repo or following.
