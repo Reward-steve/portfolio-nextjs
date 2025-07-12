@@ -23,7 +23,7 @@ export const InputField = ({
         value={value}
         onChange={onChange}
         placeholder="Your message here..."
-        className="w-full mt-1 px-2 h-[54px] border rounded-xl focus:ring-cyan-400 border-gray-700 bg-transparent"
+        className="w-full mt-1 px-2 h-[52px] border rounded-xl focus:ring-cyan-400 border-gray-700 bg-transparent"
       ></textarea>
     ) : (
       <input
@@ -32,22 +32,10 @@ export const InputField = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="w-full mt-1 px-2 h-[54px] border rounded-xl focus:ring-cyan-400 border-gray-700 bg-transparent"
+        className="w-full mt-1 px-2 h-[52px] border rounded-xl focus:ring-cyan-400 border-gray-700 bg-transparent"
       />
     )}
   </>
 );
 
-/*  
-
-1️⃣ Tailwind's Default Breakpoints
-Tailwind provides default breakpoints for different screen sizes:
-
-Prefix	       Min Width	         Devices
-sm:	640px	   Small devices        (phones)
-md:	768px	   Medium devices       (tablets)
-lg:	1024px	   Large devices        (laptops)
-xl:	1280px	   Extra large screens  (desktops)
-2xl:1536px	   Very large screens
-
-*/
+ 

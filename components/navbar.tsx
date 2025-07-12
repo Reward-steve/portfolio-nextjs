@@ -45,7 +45,9 @@ export default function Navigation() {
           >
             {linkName}
             <m.span
-              className="h-[2px] dark:bg-cyan-400 bg-cyan-800 transition-all duration-300"
+              className="h-[2px] transition-all duration-300 
+             bg-gradient-to-r from-cyan-100 to-cyan-400 
+             dark:from-cyan-600 dark:to-cyan-300"
               animate={{ width: active ? "100%" : "0%" }}
               initial={{ width: "0%" }}
             />
