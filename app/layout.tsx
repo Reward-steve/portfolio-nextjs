@@ -51,6 +51,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="nIAFda20iF_m5takSxiHmHOR1QC2tT4qSM-AldTNmKQ"
+        />
+      </head>
       <body className="antialiased bg-[#ffffff] text-[#0f172b] dark_bg dark_tx">
         <ClientOnly>
           <LoadingProvider>
