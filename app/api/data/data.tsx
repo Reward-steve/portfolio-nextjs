@@ -3,8 +3,9 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaEnvelope } from "react-icons/fa";
 import img1 from "../../../public/image/country.png";
 import img2 from "../../../public/image/food.png";
 import img3 from "../../../public/image/ticket.png";
-import img4 from "../../..//public/image/personal.png";
-import img5 from "../../..//public/image/ut.png";
+import img4 from "../../../public/image/personal.png";
+import img5 from "../../../public/image/ut.png";
+import img6 from "../../../public/image/ui-fix.png";
 import service1 from "../../../public/image/business.jpg";
 import service2 from "../../../public/image/landing.jpg";
 import service3 from "../../../public/image/dev.jpg";
@@ -107,43 +108,43 @@ export const projects = [
     title: "Urban Tailor",
     image: img5,
     cardInfo:
-      "A tailored business website for fashion boutiques and tailors, featuring a responsive layout, service showcase, and client engagement tools.",
+      "A modern fashion brand landing page built in 3 days. Features dynamic image galleries, smooth animations, and responsive layouts tailored for tailoring businesses.",
 
     features: [
-      "Modern landing page layout with mobile-first design",
-      "Dedicated services and gallery sections for brand presentation",
-      "Integrated contact form and WhatsApp support",
-      "Dark mode toggle for accessible UX",
+      "Dark/light mode toggle with clean visual hierarchy",
+      "Style sections: Female, Male, Native, Urban Casual",
+      "Gallery previews and interactive FAQ section",
+      "Fully responsive UI with Headless UI navigation",
     ],
     demo: "https://urban-tailor.vercel.app/",
     repo: "https://github.com/Reward-steve/urban-tailor",
   },
   {
-    title: "TastyHub Website",
+    title: "TastyHub-UI",
     image: img2,
     cardInfo:
-      "A responsive recipe discovery platform with structured content, clean UI, and smooth animations for seamless user exploration.",
+      "A recipe discovery interface designed with clarity, speed, and a user-first approach. Smooth visuals and responsive layout make exploring food content seamless.",
 
     features: [
-      "Interactive recipe browsing experience",
-      "Elegant and intuitive user interface",
-      "Responsive layout optimized for mobile and desktop",
-      "Subtle animations for modern visual feedback",
+      "Grid-based layout with card animations",
+      "Mobile-first responsive structure",
+      "Clear visual structure and theme consistency",
+      "Reusable components for scaling future content",
     ],
     demo: "https://tasty-hub-phi.vercel.app/",
     repo: "https://github.com/Reward-steve/Tasty-hub",
   },
   {
-    title: "My Country App",
+    title: "Country Explorer",
     image: img1,
     cardInfo:
-      "A data-driven React app offering detailed country profiles using REST APIs. Includes dark mode and optimized data fetching logic.",
+      "A Chakra UI + JavaScript-powered app that fetches real-time country data via REST APIs. Built with accessibility, responsiveness, and performance in mind.",
 
     features: [
-      "Live search for countries by name",
-      "Dynamic country details: flag, capital, population, and GDP",
-      "Responsive UI with light/dark theme toggle",
-      "Graceful handling of missing or incomplete API data",
+      "Live search with auto-filter functionality",
+      "Clean card layout with country details and flags",
+      "Dark mode toggle using Chakra UI",
+      "Error handling for incomplete or missing data",
     ],
     demo: "https://my-country-app-three.vercel.app/",
     repo: "https://github.com/Reward-steve/My-Country-App",
@@ -152,13 +153,13 @@ export const projects = [
     title: "Personal Portfolio",
     image: img4,
     cardInfo:
-      "My personal portfolio showcasing featured projects, tech stack, and contact methods. Built using Next.js and Tailwind CSS.",
+      "A personal frontend portfolio built with Next.js App Router and Tailwind CSS. Features animated transitions, responsive UI, and GitHub integration.",
 
     features: [
-      "Clean section-based layout with smooth navigation",
-      "Responsive design with interactive project cards",
-      "Tailwind CSS and Next.js integration",
-      "Dark mode and animated transitions",
+      "Project cards with live demos and repo links",
+      "SEO-ready metadata and Open Graph setup",
+      "Smooth scroll animations and section-based routing",
+      "Mobile-optimized, accessible navigation",
     ],
     demo: "https://my-portfolio-website-chi-kohl.vercel.app/",
     repo: "https://github.com/Reward-steve/my-portfolio",
@@ -167,17 +168,31 @@ export const projects = [
     title: "Conference Ticket Generator",
     image: img3,
     cardInfo:
-      "An advanced form-driven React app that generates custom digital tickets with unique user data and QR validation logic.",
+      "A digital ticketing system that generates unique QR-validated conference tickets based on user input. Includes real-time form validation and preview functionality.",
 
     features: [
-      "Form validation with real-time feedback (email, required fields)",
-      "File upload with instant preview and inline error handling",
-      "Live-rendered digital ticket including name, ticket ID, and QR code",
-      "Admin panel with data management tools (demo-ready)",
-      "Designed with accessibility and user flow in mind",
+      "Live QR code and ticket rendering",
+      "Image upload with validation and inline previews",
+      "Dynamic ticket design with export-ready layout",
+      "Form error handling for a smooth user experience",
     ],
     demo: "https://conference-ticket-generator-gamma.vercel.app/",
     repo: "https://github.com/Reward-steve/conference-ticket-generator-main",
+  },
+  {
+    title: "UI Fix – Before & After",
+    image: img6,
+    cardInfo:
+      "A side-by-side transformation of a broken UI layout into a clean, responsive, and modern component-based interface. Demonstrates real-world debugging and design thinking.",
+
+    features: [
+      "Broken layout with inline styles and bad spacing",
+      "Fixed version uses Tailwind CSS and responsive grid",
+      "Interactive demo: toggle between before and after",
+      "Perfect showcase for Upwork clients needing UI fixes",
+    ],
+    demo: "https://ui-fix-before-after-reward-stephens-projects.vercel.app/",
+    repo: "https://github.com/Reward-steve/ui-fix-before-after",
   },
 ];
 

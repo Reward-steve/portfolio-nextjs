@@ -13,9 +13,11 @@ export const metadata = {
     "Reward Stephen",
     "Frontend Developer",
     "Web Developer",
-    "Portfolio",
     "React Developer",
     "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Portfolio",
   ],
   openGraph: {
     title: "Reward Stephen | Frontend Developer",
@@ -25,7 +27,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "../app/asset/website.png",
+        url: "https://my-portfolio-website-chi-kohl.vercel.app/website.png",
         width: 1200,
         height: 630,
         alt: "Reward Stephen Portfolio",
@@ -34,11 +36,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@your_twitter_handle",
+    site: "@RewardStephen",
     title: "Reward Stephen | Frontend Developer",
     description:
       "Explore Reward Stephen's portfolio, showcasing projects and skills as a frontend developer.",
-    images: ["../app/asset/website.png"],
+    images: ["https://my-portfolio-website-chi-kohl.vercel.app/website.png"],
   },
 };
 
