@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://my-portfolio-website-chi-kohl.vercel.app
+
+# Sitemaps
+Sitemap: https://my-portfolio-website-chi-kohl.vercel.app/sitemap.xml
